@@ -1,0 +1,67 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --color-accent: #2dd4bf;
+  --color-accent-dim: #14b8a6;
+
+  --color-bg: #fafaf9;
+  --color-surface: #ffffff;
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #52525b;
+  --color-line: #e4e4e7;
+
+  --animate-blink: blink 1.05s step-end infinite;
+
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+}
+
+.dark {
+  --color-bg: #08090b;
+  --color-surface: #101216;
+  --color-ink: #f4f4f5;
+  --color-ink-soft: #9ca0a8;
+  --color-line: #22252b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #04120f;
+}
+
+/* Respect users who've asked for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
