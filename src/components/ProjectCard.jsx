@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion'
-import { ExternalLink } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './icons/BrandIcons'
-import FeaturedVisual from './visuals/FeaturedVisual'
-import ProjectMockup from './visuals/ProjectMockup'
+import ProjectImage from './visuals/ProjectImage'
 
 export default function ProjectCard({ project }) {
   const { name, tagline, description, tech, github, demo, image, featured } = project
@@ -11,51 +10,27 @@ export default function ProjectCard({ project }) {
     <motion.article
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className={`group rounded-2xl border border-line bg-surface p-5 shadow-none transition-shadow duration-300 hover:shadow-xl hover:shadow-accent/5 sm:p-6 ${
-        featured ? 'ring-1 ring-accent/30' : ''
+      className={`group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10 ${
+        featured ? 'ring-1 ring-accent/40 lg:flex-row' : ''
       }`}
     >
-      {featured && (
-        <span className="mb-4 inline-block rounded-full bg-accent/10 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-accent">
-          Featured project
-        </span>
-      )}
-
-      {image ? (
-        <img src={image} alt={`${name} screenshot`} className="aspect-video w-full rounded-xl border border-line object-cover" />
-      ) : featured ? (
-        <FeaturedVisual />
-      ) : (
-        <ProjectMockup name={name} />
-      )}
-
-      <div className="mt-5">
-        <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <h3 className="text-xl font-bold text-ink">{name}</h3>
-          <div className="flex items-center gap-3">
-            <a
-              href={github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label={`${name} on GitHub`}
-              className="text-ink-soft transition-colors hover:text-accent"
-            >
-              <GithubIcon size={17} />
-            </a>
-            {demo && (
-              <a
-                href={demo}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`${name} live demo`}
-                className="text-ink-soft transition-colors hover:text-accent"
-              >
-                <ExternalLink size={17} />
-              </a>
-            )}
-          </div>
+      <div className={`relative overflow-hidden ${featured ? 'aspect-video lg:aspect-auto lg:w-[46%]' : 'aspect-video'}`}>
+        <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
+          <ProjectImage src={image} alt={`${name} preview`} name={name} />
         </div>
-        <p className="mt-1 font-mono text-xs text-accent">{tagline}</p>
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+
+        {featured && (
+          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#04120f] shadow-lg">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#04120f]" />
+            Featured
+          </span>
+        )}
+      </div>
+
+      <div className={`flex flex-1 flex-col p-6 ${featured ? 'lg:p-8 lg:justify-center' : ''}`}>
+        <h3 className={`font-bold text-ink ${featured ? 'text-2xl lg:text-3xl' : 'text-xl'}`}>{name}</h3>
+        <p className="mt-1.5 font-mono text-xs text-accent">{tagline}</p>
         <p className="mt-3 text-sm leading-relaxed text-ink-soft">{description}</p>
 
         <ul className="mt-4 flex flex-wrap gap-2">
@@ -68,6 +43,29 @@ export default function ProjectCard({ project }) {
             </li>
           ))}
         </ul>
+
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          <a
+            href={github}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+          >
+            <GithubIcon size={15} />
+            View Code
+          </a>
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-[#04120f] transition-transform hover:scale-105 active:scale-95"
+            >
+              Live Demo
+              <ArrowUpRight size={15} />
+            </a>
+          )}
+        </div>
       </div>
     </motion.article>
   )

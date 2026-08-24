@@ -1,7 +1,10 @@
-// Edit this file to add, remove, or reorder projects — the UI just maps over the array.
-// `image` is optional: drop a screenshot/GIF at src/assets/projects/<file> and point to it
-// (e.g. `image: '/src/assets/projects/vtryfyp.png'`) to replace the generated code-mockup visual.
+// Edit this file to add, remove, or reorder projects — the UI just maps over these arrays.
+// `image` defaults to GitHub's auto-generated social-preview card for the repo; if a project
+// has a real screenshot/GIF, drop it in src/assets/projects/ and point `image` at it instead.
 
+const ogImage = (repo) => `https://opengraph.githubassets.com/1/SaharFatimaDevjani/${repo}`
+
+// Full-detail cards, best to worst. First entry is the featured/lead project.
 export const projects = [
   {
     id: 'vtryfyp',
@@ -13,11 +16,10 @@ export const projects = [
     tech: ['React 18', 'Vite', 'Tailwind CSS', 'Storefront UI', 'MediaPipe', 'Node.js', 'Express 5', 'MongoDB', 'Mongoose', 'JWT', 'Cloudinary'],
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
-    image: null,
+    image: ogImage('VTryFYP'),
   },
   {
     id: '10pearls-mern',
-    featured: false,
     name: '10PearlsMERN',
     tagline: 'Self-hosted notes app with WYSIWYG editing and real auth security',
     description:
@@ -25,11 +27,32 @@ export const projects = [
     tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai'],
     github: 'https://github.com/SaharFatimaDevjani/10PearlsMERN',
     demo: null,
-    image: null,
+    image: ogImage('10PearlsMERN'),
+  },
+  {
+    id: 'hotel-management-system',
+    name: 'Hotel Management System',
+    tagline: 'Spring Boot + React booking platform with role-based access',
+    description:
+      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
+    tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
+    github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
+    demo: null,
+    image: ogImage('hotelmanagementsystem'),
+  },
+  {
+    id: 'freshbaked',
+    name: 'Fresh Baked',
+    tagline: 'Bakery storefront with Firebase-backed admin panel — deployed live',
+    description:
+      "A bakery portfolio site built as a CodeGirls capstone, with an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
+    tech: ['React', 'Vite', 'Tailwind CSS', 'Firebase Auth', 'Firestore', 'React Router', 'Framer Motion'],
+    github: 'https://github.com/SaharFatimaDevjani/freshbaked',
+    demo: 'https://lnkd.in/dY4QS27R',
+    image: ogImage('freshbaked'),
   },
   {
     id: 'mern-application',
-    featured: false,
     name: 'MERN Application',
     tagline: 'Full-stack product catalog with end-to-end CRUD',
     description:
@@ -37,11 +60,10 @@ export const projects = [
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'],
     github: 'https://github.com/SaharFatimaDevjani/MERN_Application',
     demo: null,
-    image: null,
+    image: ogImage('MERN_Application'),
   },
   {
     id: 'devjanimasala',
-    featured: false,
     name: 'DevjaniMasala',
     tagline: "Django storefront built for my family's spice business",
     description:
@@ -49,30 +71,118 @@ export const projects = [
     tech: ['Python', 'Django', 'SQLite', 'Django Templates'],
     github: 'https://github.com/SaharFatimaDevjani/Devjanimasala',
     demo: null,
-    image: null,
+    image: ogImage('Devjanimasala'),
   },
   {
     id: 'product-crud',
-    featured: false,
     name: 'Product CRUD',
-    tagline: 'React CRUD dashboard with a single shared add/edit form',
+    tagline: 'React CRUD dashboard with a single shared add/edit form — deployed live',
     description:
       "A product management dashboard against a mock API, notable mainly for its form design — one form handles both add and edit, branching on whether a product ID is present in the URL rather than duplicating markup. Paired with a dynamic table with inline edit/delete and SweetAlert2 confirmations for a more polished feel than a bare CRUD app usually gets.",
     tech: ['React', 'React Router', 'Axios', 'MockAPI', 'SweetAlert2', 'Vite'],
     github: 'https://github.com/SaharFatimaDevjani/Product_crud',
     demo: 'https://saharfatimadevjani.github.io/Product_crud/',
-    image: null,
+    image: ogImage('Product_crud'),
   },
+]
+
+// Smaller/practice repos — still real, shown as a compact list rather than full cards.
+export const otherProjects = [
   {
     id: 'stepup',
-    featured: false,
     name: 'StepUP',
-    tagline: 'Vanilla HTML/CSS/JS tourism site',
-    description:
-      'An early frontend-only practice build — a tourism site with smooth-scroll navigation, hover interactions, and CSS animations, no framework involved. It marks the starting point of the frontend fundamentals everything else here builds on.',
-    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    tagline: 'Vanilla HTML/CSS/JS tourism site — smooth-scroll & hover animation practice',
     github: 'https://github.com/SaharFatimaDevjani/StepUP',
     demo: 'https://saharfatimadevjani.github.io/StepUP/',
-    image: null,
+    image: ogImage('StepUP'),
+  },
+  {
+    id: 'jinnahnew',
+    name: 'JinnahNew',
+    tagline: 'Responsive university landing page — About, Courses, Contact sections',
+    github: 'https://github.com/SaharFatimaDevjani/JinnahNew',
+    demo: null,
+    image: ogImage('JinnahNew'),
+  },
+  {
+    id: 'hgfashion',
+    name: 'HGFashion',
+    tagline: 'Static HTML/CSS/JS fashion landing page',
+    github: 'https://github.com/SaharFatimaDevjani/HGFashion',
+    demo: null,
+    image: ogImage('HGFashion'),
+  },
+  {
+    id: 'snapcheck-internship',
+    name: 'SnapCheckInternship',
+    tagline: 'Next.js + Tailwind app built for an internship take-home task',
+    github: 'https://github.com/SaharFatimaDevjani/SnapCheckInternship',
+    demo: null,
+    image: ogImage('SnapCheckInternship'),
+  },
+  {
+    id: 'edusity',
+    name: 'Edusity',
+    tagline: 'Early-stage React scaffold for an education-platform concept',
+    github: 'https://github.com/SaharFatimaDevjani/Edusity',
+    demo: null,
+    image: ogImage('Edusity'),
+  },
+  {
+    id: 'api-development',
+    name: 'APIDevelopment',
+    tagline: 'Express + Node.js REST API scaffold — routes/models practice',
+    github: 'https://github.com/SaharFatimaDevjani/APIDevelopment',
+    demo: null,
+    image: ogImage('APIDevelopment'),
+  },
+  {
+    id: 'react-dynamic-table',
+    name: 'ReactDynamicTableData',
+    tagline: 'React practice building a dynamic data table',
+    github: 'https://github.com/SaharFatimaDevjani/ReactDynamicTableData',
+    demo: null,
+    image: ogImage('ReactDynamicTableData'),
+  },
+  {
+    id: 'dyamin-data-case-conversion',
+    name: 'DyaminDataCaseConversion',
+    tagline: 'React utility for case-converting structured data',
+    github: 'https://github.com/SaharFatimaDevjani/DyaminDataCaseConversion',
+    demo: null,
+    image: ogImage('DyaminDataCaseConversion'),
+  },
+  {
+    id: 'css-assignment',
+    name: 'CSSAssignment',
+    tagline: 'Advanced CSS technique coursework',
+    github: 'https://github.com/SaharFatimaDevjani/CSSAssignment',
+    demo: null,
+    image: ogImage('CSSAssignment'),
+  },
+  {
+    id: 'mvc-demo',
+    name: 'MVCDemo',
+    tagline: 'ASP.NET MVC snack-inventory demo — coursework in the MVC pattern',
+    github: 'https://github.com/SaharFatimaDevjani/MVCDemo',
+    demo: null,
+    image: ogImage('MVCDemo'),
+  },
+  {
+    id: 'devops-assignment',
+    name: 'DevopsAssignment',
+    tagline: 'CI/CD and tooling coursework assignment',
+    github: 'https://github.com/SaharFatimaDevjani/DevopsAssignment',
+    demo: null,
+    image: ogImage('DevopsAssignment'),
+  },
+  {
+    id: 'mytodo',
+    name: 'MyTodO',
+    tagline: 'Native Android to-do app',
+    tech: ['Kotlin', 'Gradle'],
+    github: 'https://github.com/SaharFatimaDevjani/MyTodO',
+    demo: null,
+    image: ogImage('MyTodO'),
   },
 ]

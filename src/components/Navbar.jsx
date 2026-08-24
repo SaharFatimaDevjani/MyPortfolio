@@ -23,17 +23,19 @@ export default function Navbar({ theme, onToggleTheme }) {
   }, [])
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled ? 'bg-bg/80 backdrop-blur-md border-b border-line' : 'bg-transparent'
-      }`}
-    >
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
+      <nav
+        className={`flex w-full max-w-3xl items-center justify-between rounded-full border px-5 py-2.5 transition-all duration-300 ${
+          scrolled
+            ? 'border-line bg-surface/80 shadow-lg shadow-black/5 backdrop-blur-md'
+            : 'border-transparent bg-transparent'
+        }`}
+      >
         <a href="#top" className="font-mono text-sm font-medium tracking-tight text-ink">
           sahar<span className="text-accent">.</span>dev
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-7 md:flex">
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -61,17 +63,17 @@ export default function Navbar({ theme, onToggleTheme }) {
 
       {open && (
         <motion.ul
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          className="flex flex-col gap-1 border-t border-line bg-bg px-6 pb-4 md:hidden"
+          initial={{ opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          className="absolute inset-x-4 top-16 flex flex-col gap-1 rounded-2xl border border-line bg-surface p-3 shadow-xl md:hidden"
         >
           {LINKS.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="block py-2 font-mono text-sm uppercase tracking-wider text-ink-soft hover:text-accent"
+                className="block rounded-lg px-3 py-2 font-mono text-sm uppercase tracking-wider text-ink-soft hover:bg-accent/10 hover:text-accent"
               >
                 {link.label}
               </a>

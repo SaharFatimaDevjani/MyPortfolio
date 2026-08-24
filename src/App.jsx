@@ -12,7 +12,7 @@ export default function App() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <div className="min-h-svh bg-bg text-ink">
+    <div className="grain min-h-svh bg-bg text-ink">
       <Navbar theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
