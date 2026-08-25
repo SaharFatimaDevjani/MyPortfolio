@@ -14,6 +14,19 @@ export const experience = [
     tech: ['Vue.js', 'Camunda (BPMN workflows)'],
   },
   {
+    company: 'Devjani Naturals',
+    role: 'Web Developer & Social Media Manager',
+    type: 'Family Business',
+    period: 'Ongoing',
+    location: 'Karachi, Pakistan',
+    bullets: [
+      "Built and maintain the WordPress site for my family's natural products business — the only project on this page that's an actual live, production site with real customers.",
+      "Manage the brand's social media presence and content alongside the website.",
+    ],
+    tech: ['WordPress'],
+    projectLink: 'devjani-naturals',
+  },
+  {
     company: '10Pearls',
     role: '10Pearls Shine Intern (MERN)',
     type: 'Internship · Remote',

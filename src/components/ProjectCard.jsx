@@ -4,7 +4,7 @@ import { GithubIcon } from './icons/BrandIcons'
 import ProjectImage from './visuals/ProjectImage'
 
 export default function ProjectCard({ project }) {
-  const { id, name, tagline, description, tech, github, demo, image, featured } = project
+  const { id, name, tagline, description, tech, github, demo, demoLabel, image, featured } = project
 
   return (
     <motion.article
@@ -19,7 +19,9 @@ export default function ProjectCard({ project }) {
         <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
           <ProjectImage src={image} alt={`${name} preview`} name={name} />
         </div>
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
+        {/* Uniform color-grade wash so screenshots from very different sites still read as one set */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/60 via-bg/5 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-accent/10 mix-blend-overlay" />
 
         {featured && (
           <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-ink shadow-lg">
@@ -46,15 +48,17 @@ export default function ProjectCard({ project }) {
         </ul>
 
         <div className="mt-5 flex flex-wrap items-center gap-3">
-          <a
-            href={github}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
-          >
-            <GithubIcon size={15} />
-            View Code
-          </a>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              <GithubIcon size={15} />
+              View Code
+            </a>
+          )}
           {demo && (
             <a
               href={demo}
@@ -62,7 +66,7 @@ export default function ProjectCard({ project }) {
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-ink transition-transform hover:scale-105 active:scale-95"
             >
-              Live Demo
+              {demoLabel || 'Live Demo'}
               <ArrowUpRight size={15} />
             </a>
           )}

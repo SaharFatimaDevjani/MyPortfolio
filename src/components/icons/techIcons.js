@@ -25,6 +25,7 @@ import {
   SiReactrouter,
   SiScikitlearn,
   SiPostgresql,
+  SiWordpress,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa6'
 
@@ -66,4 +67,5 @@ export const TECH_ICONS = {
   'Java': FaJava,
   'scikit-learn': SiScikitlearn,
   'PostgreSQL': SiPostgresql,
+  'WordPress': SiWordpress,
 }
