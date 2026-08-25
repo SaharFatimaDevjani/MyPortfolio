@@ -6,8 +6,9 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
 
-  --color-accent: #2dd4bf;
-  --color-accent-dim: #14b8a6;
+  --color-accent: #38bdf8;
+  --color-accent-dim: #0ea5e9;
+  --color-accent-ink: #041521;
 
   --color-bg: #fafaf9;
   --color-surface: #ffffff;
@@ -39,11 +40,11 @@
 }
 
 .dark {
-  --color-bg: #08090b;
-  --color-surface: #101216;
-  --color-ink: #f4f4f5;
-  --color-ink-soft: #9ca0a8;
-  --color-line: #22252b;
+  --color-bg: #090a14;
+  --color-surface: #10121e;
+  --color-ink: #f4f5f7;
+  --color-ink-soft: #949aab;
+  --color-line: #23273a;
 }
 
 html {
@@ -61,7 +62,7 @@ body {
 
 ::selection {
   background-color: var(--color-accent);
-  color: #04120f;
+  color: var(--color-accent-ink);
 }
 
 /* Fixed film-grain texture for depth; cheap (single tiled SVG, no JS) and barely visible. */

@@ -52,8 +52,8 @@ export const projects = [
     image: ogImage('freshbaked'),
   },
   {
-    id: 'mern-application',
-    name: 'MERN Application',
+    id: 'tasty-treats',
+    name: 'Tasty Treats',
     tagline: 'Full-stack product catalog with end-to-end CRUD',
     description:
       'A product management site covering the full MERN loop — a React frontend across Home, About, Products, and Contact pages talking to an Express/MongoDB REST API for create, read, update, and delete. Built with form validation on both empty fields and email format, it was where I first wired up a complete client-to-database round trip on my own rather than following a course template.',

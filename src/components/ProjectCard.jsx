@@ -4,13 +4,14 @@ import { GithubIcon } from './icons/BrandIcons'
 import ProjectImage from './visuals/ProjectImage'
 
 export default function ProjectCard({ project }) {
-  const { name, tagline, description, tech, github, demo, image, featured } = project
+  const { id, name, tagline, description, tech, github, demo, image, featured } = project
 
   return (
     <motion.article
+      id={id}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className={`group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10 ${
+      className={`group scroll-mt-24 flex flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10 ${
         featured ? 'ring-1 ring-accent/40 lg:flex-row' : ''
       }`}
     >
@@ -21,8 +22,8 @@ export default function ProjectCard({ project }) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
 
         {featured && (
-          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[#04120f] shadow-lg">
-            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#04120f]" />
+          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-ink shadow-lg">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent-ink" />
             Featured
           </span>
         )}
@@ -59,7 +60,7 @@ export default function ProjectCard({ project }) {
               href={demo}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-[#04120f] transition-transform hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-ink transition-transform hover:scale-105 active:scale-95"
             >
               Live Demo
               <ArrowUpRight size={15} />

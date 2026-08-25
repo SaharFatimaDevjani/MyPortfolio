@@ -80,7 +80,7 @@ export default function Hero() {
       >
         <a
           href="#projects"
-          className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-[#04120f] transition-transform hover:scale-105 active:scale-95"
+          className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-accent-ink transition-transform hover:scale-105 active:scale-95"
         >
           View Projects
         </a>

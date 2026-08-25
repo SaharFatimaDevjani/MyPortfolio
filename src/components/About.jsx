@@ -7,11 +7,13 @@ export default function About() {
       <Reveal>
         <SectionHeading index="01" title="About" />
         <p className="mt-8 text-lg leading-relaxed text-ink-soft sm:text-xl">
-          I'm a self-funded BSCS graduate who builds full-stack web applications, most recently a
-          real-time computer vision try-on system for my final-year project. Day to day I work as
-          a Software Design Engineer on a production banking application, and I'm currently
-          focused on sharpening my backend engineering with AI-assisted workflows — with an eye on
-          going deeper into AI/ML down the line.
+          I'm a self-funded Computer Science student at Muhammad Ali Jinnah University who builds
+          full-stack web applications, most recently a real-time computer vision try-on system for
+          my final-year project. I paid my own way through school with a string of internships —
+          frontend, then AI product work, then full-stack MERN — before moving into a full-time
+          Software Design Engineer role. Day to day I work on a production banking application, and
+          I'm currently focused on sharpening my backend engineering with AI-assisted workflows —
+          with an eye on going deeper into AI/ML down the line.
         </p>
       </Reveal>
     </section>
