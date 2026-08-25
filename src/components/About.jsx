@@ -10,8 +10,8 @@ export default function About() {
           I'm a self-funded BSCS graduate who builds full-stack web applications, most recently a
           real-time computer vision try-on system for my final-year project. Day to day I work as
           a Software Design Engineer on a production banking application, and I'm currently
-          applying to Master's programs in AI/Computer Science in Germany to push further into the
-          machine learning side of that work.
+          focused on sharpening my backend engineering with AI-assisted workflows — with an eye on
+          going deeper into AI/ML down the line.
         </p>
       </Reveal>
     </section>

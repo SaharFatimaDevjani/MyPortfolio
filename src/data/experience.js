@@ -13,11 +13,4 @@ export const experience = [
     description:
       'Completed a Computer Science degree entirely self-funded, capped by VTryFYP — a real-time computer vision try-on system — as the final-year project.',
   },
-  {
-    role: "Master's in AI/CS — Applying",
-    org: 'Germany',
-    period: 'In progress',
-    description:
-      'Currently applying to Master\'s programs in AI/Computer Science in Germany to go deeper into the machine learning side of the work VTryFYP started.',
-  },
 ]
