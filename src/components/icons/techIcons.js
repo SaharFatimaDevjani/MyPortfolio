@@ -23,6 +23,8 @@ import {
   SiCamunda,
   SiMocha,
   SiReactrouter,
+  SiScikitlearn,
+  SiPostgresql,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa6'
 
@@ -62,4 +64,6 @@ export const TECH_ICONS = {
   'Camunda (BPMN workflows)': SiCamunda,
   'Mocha/Chai': SiMocha,
   'Java': FaJava,
+  'scikit-learn': SiScikitlearn,
+  'PostgreSQL': SiPostgresql,
 }

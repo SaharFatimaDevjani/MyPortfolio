@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-3xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="05" title="Contact" />
+        <SectionHeading index="06" title="Contact" />
         <p className="mt-6 text-lg text-ink-soft">
           Open to new roles and collaborations — feel free to reach out.
         </p>

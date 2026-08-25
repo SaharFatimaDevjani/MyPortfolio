@@ -1,11 +1,12 @@
 // Reverse-chronological — most recent first. `projectLink` is optional: point it at a
 // project's `id` from data/projects.js to cross-link the work built during that role.
+// Dates/details verified against LinkedIn (Aug 2026 export).
 export const experience = [
   {
     company: 'Teresol',
     role: 'Software Design Engineer',
     type: 'Full-Time',
-    period: 'Aug 2025 — Present',
+    period: 'Jun 2026 — Present',
     location: 'Karachi, Pakistan',
     bullets: [
       'Building a production banking application on Vue.js, integrating Camunda-driven BPMN workflows into real business processes rather than prototypes.',
@@ -14,14 +15,14 @@ export const experience = [
   },
   {
     company: '10Pearls',
-    role: 'MERN Stack Developer Intern',
+    role: '10Pearls Shine Intern (MERN)',
     type: 'Internship · Remote',
-    period: 'Jun 2025 — Aug 2025',
-    location: 'Remote',
+    period: 'Jun 2025 — Sep 2025',
+    location: 'Pakistan',
     bullets: [
-      'Built a complete notes application from scratch using Node.js, React.js, and MongoDB, with authentication and rich-text editing.',
-      'Implemented structured logging with Pino, global exception handling, and unit tests with Mocha/Chai and Jest.',
-      'Integrated SonarQube for code-quality checks and collaborated through Git for version control.',
+      'Built a complete notes application from scratch using Node.js, React.js, and MongoDB, with secure authentication/authorization and rich-text editing.',
+      'Ensured code quality through global exception handling, structured logging with Pino, unit testing (Mocha/Chai & Jest), and SonarQube analysis.',
+      'Gained hands-on experience with Git version control and real-world Agile workflows under the guidance of industry mentors, as part of the 10Pearls Shine Internship Program.',
     ],
     tech: ['Node.js', 'React.js', 'MongoDB', 'Jest', 'Mocha/Chai', 'SonarQube', 'Git'],
     projectLink: '10pearls-mern',
@@ -30,20 +31,20 @@ export const experience = [
     company: 'Click Chain Academy',
     role: 'AI Product Development Fellow',
     type: 'Fellowship · Remote',
-    period: 'May 2025 — Aug 2025',
+    period: 'Apr 2025 — Aug 2025',
     location: 'Remote',
     bullets: [
-      'Collaborated on team projects using Agile methods to design and build web solutions.',
-      'Prototyped frontend flows in Figma and wrote backend logic scripts in Java and Python.',
-      'Strengthened teamwork, problem-solving, and Git-based version-control workflows.',
+      'Contributed across the stack on real product teams in a collaborative, remote-first environment — UI/UX design, Agile workflows, Test-Driven Development, and pair programming.',
+      'Worked with Python, Java, and scikit-learn to build chatbots and prediction systems as part of AI-driven product features.',
+      'Practiced epic/user-story creation, sprint forecasting, and retrospectives, bridging theoretical learning with practical product development.',
     ],
-    tech: ['Figma', 'Java', 'Python', 'Git'],
+    tech: ['Python', 'Java', 'scikit-learn', 'Figma', 'Git'],
   },
   {
     company: 'RobX AI',
-    role: 'Frontend Intern',
+    role: 'Web Development Intern',
     type: 'Internship · Remote',
-    period: 'Oct 2024 — Dec 2024',
+    period: 'Nov 2024 — Jan 2025',
     location: 'Remote',
     bullets: [
       'Contributed to frontend development using React, Next.js, and Tailwind CSS to build responsive UIs.',
