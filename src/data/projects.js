@@ -1,8 +1,10 @@
 // Edit this file to add, remove, or reorder projects — the UI just maps over these arrays.
-// `image` defaults to GitHub's auto-generated social-preview card for the repo; if a project
-// has a real screenshot/GIF, drop it in src/assets/projects/ and point `image` at it instead.
+// IMAGES: to show a real screenshot for a project, save it as
+//   public/projects/<id>.jpg
+// (matching the `id` below, e.g. public/projects/vtryfyp.jpg) — no code change needed.
+// Until that file exists, the card automatically falls back to a generated placeholder.
 
-const ogImage = (repo) => `https://opengraph.githubassets.com/1/SaharFatimaDevjani/${repo}`
+const localImage = (id) => `/projects/${id}.jpg`
 
 // Full-detail cards, best to worst. First entry is the featured/lead project.
 export const projects = [
@@ -16,7 +18,19 @@ export const projects = [
     tech: ['React 18', 'Vite', 'Tailwind CSS', 'Storefront UI', 'MediaPipe', 'Node.js', 'Express 5', 'MongoDB', 'Mongoose', 'JWT', 'Cloudinary'],
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
-    image: ogImage('VTryFYP'),
+    image: localImage('vtryfyp'),
+  },
+  {
+    id: 'devjani-naturals',
+    name: 'Devjani Naturals',
+    tagline: "Live WordPress site for my family's natural products business",
+    description:
+      "The actual production website for my family's natural products business — built on WordPress and still live today. I don't just maintain the site: I run the brand's social media alongside it, so this is ongoing, real-world responsibility rather than a one-off build. It's the project on this page with genuine business impact and real users, not a course exercise.",
+    tech: ['WordPress'],
+    github: null,
+    demo: 'https://devjaninaturals.com',
+    demoLabel: 'Visit Site',
+    image: localImage('devjani-naturals'),
   },
   {
     id: '10pearls-mern',
@@ -27,7 +41,7 @@ export const projects = [
     tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai'],
     github: 'https://github.com/SaharFatimaDevjani/10PearlsMERN',
     demo: null,
-    image: ogImage('10PearlsMERN'),
+    image: localImage('10pearls-mern'),
   },
   {
     id: 'hotel-management-system',
@@ -38,7 +52,7 @@ export const projects = [
     tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
     github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
     demo: null,
-    image: ogImage('hotelmanagementsystem'),
+    image: localImage('hotel-management-system'),
   },
   {
     id: 'freshbaked',
@@ -49,7 +63,7 @@ export const projects = [
     tech: ['React', 'Vite', 'Tailwind CSS', 'Firebase Auth', 'Firestore', 'React Router', 'Framer Motion'],
     github: 'https://github.com/SaharFatimaDevjani/freshbaked',
     demo: 'https://lnkd.in/dY4QS27R',
-    image: ogImage('freshbaked'),
+    image: localImage('freshbaked'),
   },
   {
     id: 'tasty-treats',
@@ -60,18 +74,18 @@ export const projects = [
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'],
     github: 'https://github.com/SaharFatimaDevjani/MERN_Application',
     demo: null,
-    image: ogImage('MERN_Application'),
+    image: localImage('tasty-treats'),
   },
   {
     id: 'devjanimasala',
     name: 'DevjaniMasala',
-    tagline: "Django storefront built for my family's spice business",
+    tagline: "Django coursework storefront for my family's spice business",
     description:
-      "A Django-powered product catalog and admin panel built for my family's masala business, with authenticated admin access for managing listings and a template-driven storefront on the customer side. It was structured with future e-commerce features — cart, checkout, payments — in mind, and was my first real project outside the MERN stack, working with Django's ORM and templating instead.",
+      "A separate, earlier Django-powered product catalog and admin panel — same family business as Devjani Naturals in concept, but a different build (this one was a course project, not the live site). Authenticated admin access for managing listings, a template-driven storefront on the customer side, and structured with future e-commerce features — cart, checkout, payments — in mind. It was my first real project outside the MERN stack, working with Django's ORM and templating instead.",
     tech: ['Python', 'Django', 'SQLite', 'Django Templates'],
     github: 'https://github.com/SaharFatimaDevjani/Devjanimasala',
     demo: null,
-    image: ogImage('Devjanimasala'),
+    image: localImage('devjanimasala'),
   },
   {
     id: 'product-crud',
@@ -82,7 +96,7 @@ export const projects = [
     tech: ['React', 'React Router', 'Axios', 'MockAPI', 'SweetAlert2', 'Vite'],
     github: 'https://github.com/SaharFatimaDevjani/Product_crud',
     demo: 'https://saharfatimadevjani.github.io/Product_crud/',
-    image: ogImage('Product_crud'),
+    image: localImage('product-crud'),
   },
 ]
 
@@ -94,7 +108,7 @@ export const otherProjects = [
     tagline: 'Vanilla HTML/CSS/JS tourism site — smooth-scroll & hover animation practice',
     github: 'https://github.com/SaharFatimaDevjani/StepUP',
     demo: 'https://saharfatimadevjani.github.io/StepUP/',
-    image: ogImage('StepUP'),
+    image: localImage('stepup'),
   },
   {
     id: 'jinnahnew',
@@ -102,7 +116,7 @@ export const otherProjects = [
     tagline: 'Responsive university landing page — About, Courses, Contact sections',
     github: 'https://github.com/SaharFatimaDevjani/JinnahNew',
     demo: null,
-    image: ogImage('JinnahNew'),
+    image: localImage('jinnahnew'),
   },
   {
     id: 'hgfashion',
@@ -110,7 +124,7 @@ export const otherProjects = [
     tagline: 'Static HTML/CSS/JS fashion landing page',
     github: 'https://github.com/SaharFatimaDevjani/HGFashion',
     demo: null,
-    image: ogImage('HGFashion'),
+    image: localImage('hgfashion'),
   },
   {
     id: 'snapcheck-internship',
@@ -118,7 +132,7 @@ export const otherProjects = [
     tagline: 'Next.js + Tailwind app built for an internship take-home task',
     github: 'https://github.com/SaharFatimaDevjani/SnapCheckInternship',
     demo: null,
-    image: ogImage('SnapCheckInternship'),
+    image: localImage('snapcheck-internship'),
   },
   {
     id: 'edusity',
@@ -126,7 +140,7 @@ export const otherProjects = [
     tagline: 'Early-stage React scaffold for an education-platform concept',
     github: 'https://github.com/SaharFatimaDevjani/Edusity',
     demo: null,
-    image: ogImage('Edusity'),
+    image: localImage('edusity'),
   },
   {
     id: 'api-development',
@@ -134,7 +148,7 @@ export const otherProjects = [
     tagline: 'Express + Node.js REST API scaffold — routes/models practice',
     github: 'https://github.com/SaharFatimaDevjani/APIDevelopment',
     demo: null,
-    image: ogImage('APIDevelopment'),
+    image: localImage('api-development'),
   },
   {
     id: 'react-dynamic-table',
@@ -142,7 +156,7 @@ export const otherProjects = [
     tagline: 'React practice building a dynamic data table',
     github: 'https://github.com/SaharFatimaDevjani/ReactDynamicTableData',
     demo: null,
-    image: ogImage('ReactDynamicTableData'),
+    image: localImage('react-dynamic-table'),
   },
   {
     id: 'dyamin-data-case-conversion',
@@ -150,7 +164,7 @@ export const otherProjects = [
     tagline: 'React utility for case-converting structured data',
     github: 'https://github.com/SaharFatimaDevjani/DyaminDataCaseConversion',
     demo: null,
-    image: ogImage('DyaminDataCaseConversion'),
+    image: localImage('dyamin-data-case-conversion'),
   },
   {
     id: 'css-assignment',
@@ -158,7 +172,7 @@ export const otherProjects = [
     tagline: 'Advanced CSS technique coursework',
     github: 'https://github.com/SaharFatimaDevjani/CSSAssignment',
     demo: null,
-    image: ogImage('CSSAssignment'),
+    image: localImage('css-assignment'),
   },
   {
     id: 'mvc-demo',
@@ -166,7 +180,7 @@ export const otherProjects = [
     tagline: 'ASP.NET MVC snack-inventory demo — coursework in the MVC pattern',
     github: 'https://github.com/SaharFatimaDevjani/MVCDemo',
     demo: null,
-    image: ogImage('MVCDemo'),
+    image: localImage('mvc-demo'),
   },
   {
     id: 'devops-assignment',
@@ -174,7 +188,7 @@ export const otherProjects = [
     tagline: 'CI/CD and tooling coursework assignment',
     github: 'https://github.com/SaharFatimaDevjani/DevopsAssignment',
     demo: null,
-    image: ogImage('DevopsAssignment'),
+    image: localImage('devops-assignment'),
   },
   {
     id: 'mytodo',
@@ -183,6 +197,6 @@ export const otherProjects = [
     tech: ['Kotlin', 'Gradle'],
     github: 'https://github.com/SaharFatimaDevjani/MyTodO',
     demo: null,
-    image: ogImage('MyTodO'),
+    image: localImage('mytodo'),
   },
 ]
