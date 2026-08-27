@@ -49,6 +49,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* "proximity" (not "mandatory") nudges you into the next section on a small scroll,
+     without trapping you mid-scroll inside long sections like Projects or Experience. */
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 6rem;
+}
+
+main > section {
+  scroll-snap-align: start;
 }
 
 body {

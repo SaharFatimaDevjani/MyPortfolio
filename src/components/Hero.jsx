@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown } from 'lucide-react'
 import { useTypewriter } from '../hooks/useTypewriter'
+import { useHeroScrollCommit } from '../hooks/useHeroScrollCommit'
 import PersonPhoto from './visuals/PersonPhoto'
 
 const TAGLINE = 'Software Design Engineer, building for the web & real-time vision.'
@@ -8,6 +9,7 @@ const TICKER = ['React', 'Vue.js', 'Node.js', 'MongoDB', 'MediaPipe', 'Tailwind 
 
 export default function Hero() {
   const { output, done } = useTypewriter(TAGLINE, { speed: 28, startDelay: 500 })
+  useHeroScrollCommit('about')
 
   return (
     <section
