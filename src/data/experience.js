@@ -62,6 +62,7 @@ export const experience = [
     bullets: [
       'Contributed to frontend development using React, Next.js, and Tailwind CSS to build responsive UIs.',
       'Worked with the engineering team via Git to maintain code quality and implement modern design components.',
+      "Built Edusity and SnapCheckInternship during this time — see the More Projects list below for both.",
     ],
     tech: ['React', 'Next.js', 'Tailwind CSS', 'Git'],
   },
