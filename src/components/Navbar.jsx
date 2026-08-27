@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
+import { useActiveSection } from '../hooks/useActiveSection'
 
 const LINKS = [
   { href: '#about', label: 'About' },
@@ -12,9 +13,12 @@ const LINKS = [
   { href: '#contact', label: 'Contact' },
 ]
 
+const SECTION_IDS = ['top', ...LINKS.map((l) => l.href.slice(1))]
+
 export default function Navbar({ theme, onToggleTheme }) {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const active = useActiveSection(SECTION_IDS)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -36,17 +40,30 @@ export default function Navbar({ theme, onToggleTheme }) {
           sahar<span className="text-accent">.</span>dev
         </a>
 
-        <ul className="hidden items-center gap-7 md:flex">
-          {LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="font-mono text-xs uppercase tracking-wider text-ink-soft transition-colors hover:text-accent"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+        <ul className="hidden items-center gap-1 md:flex">
+          {LINKS.map((link) => {
+            const id = link.href.slice(1)
+            const isActive = active === id
+            return (
+              <li key={link.href} className="relative">
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active-pill"
+                    className="absolute inset-0 rounded-full bg-accent/10"
+                    transition={{ type: 'spring', stiffness: 380, damping: 32 }}
+                  />
+                )}
+                <a
+                  href={link.href}
+                  className={`relative z-10 block px-3 py-1.5 font-mono text-xs uppercase tracking-wider transition-colors ${
+                    isActive ? 'text-accent' : 'text-ink-soft hover:text-accent'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <div className="flex items-center gap-3">
@@ -69,17 +86,23 @@ export default function Navbar({ theme, onToggleTheme }) {
           exit={{ opacity: 0, y: -8 }}
           className="absolute inset-x-4 top-16 flex flex-col gap-1 rounded-2xl border border-line bg-surface p-3 shadow-xl md:hidden"
         >
-          {LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="block rounded-lg px-3 py-2 font-mono text-sm uppercase tracking-wider text-ink-soft hover:bg-accent/10 hover:text-accent"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {LINKS.map((link) => {
+            const id = link.href.slice(1)
+            const isActive = active === id
+            return (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={`block rounded-lg px-3 py-2 font-mono text-sm uppercase tracking-wider transition-colors ${
+                    isActive ? 'bg-accent/10 text-accent' : 'text-ink-soft hover:bg-accent/10 hover:text-accent'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </motion.ul>
       )}
     </header>
