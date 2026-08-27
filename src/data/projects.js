@@ -42,7 +42,7 @@ export const projects = [
       "A bakery portfolio site built as a CodeGirls capstone, with an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
     tech: ['React', 'Vite', 'Tailwind CSS', 'Firebase Auth', 'Firestore', 'React Router', 'Framer Motion'],
     github: 'https://github.com/SaharFatimaDevjani/freshbaked',
-    demo: 'https://lnkd.in/dY4QS27R',
+    demo: 'https://freshbaked.vercel.app/',
     image: localImage('freshbaked'),
   },
   {
