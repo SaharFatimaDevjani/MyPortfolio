@@ -121,7 +121,7 @@ export const otherProjects = [
   {
     id: 'edusity',
     name: 'Edusity',
-    tagline: 'Early-stage React scaffold for an education-platform concept',
+    tagline: 'React education-platform concept, built during my RobX AI internship',
     github: 'https://github.com/SaharFatimaDevjani/Edusity',
     demo: null,
     image: localImage('edusity'),
@@ -129,7 +129,7 @@ export const otherProjects = [
   {
     id: 'snapcheck-internship',
     name: 'SnapCheckInternship',
-    tagline: 'Next.js + Tailwind app built for an internship take-home task',
+    tagline: 'Next.js + Tailwind app, also built during my RobX AI internship',
     github: 'https://github.com/SaharFatimaDevjani/SnapCheckInternship',
     demo: null,
     image: localImage('snapcheck-internship'),
