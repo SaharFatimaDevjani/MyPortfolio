@@ -10,11 +10,11 @@
   --color-accent-dim: #0ea5e9;
   --color-accent-ink: #041521;
 
-  --color-bg: #fafaf9;
+  --color-bg: #eef0f4;
   --color-surface: #ffffff;
   --color-ink: #0a0a0a;
   --color-ink-soft: #52525b;
-  --color-line: #e4e4e7;
+  --color-line: #d7dae2;
 
   --animate-blink: blink 1.05s step-end infinite;
   --animate-marquee: marquee 22s linear infinite;
