@@ -14,11 +14,6 @@ export const certifications = [
     issuer: 'Meta · Coursera',
     courses: ['Introduction to Front-End Development', 'Programming with JavaScript', 'React Basics', 'Version Control'],
   },
-  {
-    name: 'English Skills Mastery (HEC DLSEI 3.0)',
-    issuer: 'Coursera',
-    courses: ['IELTS Writing Section Skills Mastery', 'IELTS Listening and Speaking Sections Skills Mastery', 'IELTS Reading Section Skills Mastery'],
-  },
   { name: 'Node.js Certificate', issuer: 'MindLuster' },
   { name: 'Getting Started with NodeJS', issuer: 'SimpliLearn' },
   { name: 'Crash Course on Python', issuer: 'Google · Coursera' },
