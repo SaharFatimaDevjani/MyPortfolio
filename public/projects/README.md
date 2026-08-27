@@ -8,26 +8,26 @@ Until a file exists, that project shows a generated placeholder instead.
 
 ## Filenames the site is currently looking for
 
-**Featured projects**
+**Featured projects** (in order shown)
 - vtryfyp.jpg
 - devjani-naturals.jpg
-- 10pearls-mern.jpg
-- hotel-management-system.jpg
 - freshbaked.jpg
+- 10pearls-mern.jpg
 - tasty-treats.jpg
+- hotel-management-system.jpg
 - devjanimasala.jpg
+- stepup.jpg
 - product-crud.jpg
 
 **More Projects (compact list)**
-- stepup.jpg
-- jinnahnew.jpg
-- hgfashion.jpg
-- snapcheck-internship.jpg
 - edusity.jpg
+- snapcheck-internship.jpg
+- jinnahnew.jpg
+- css-assignment.jpg
+- hgfashion.jpg
 - api-development.jpg
 - react-dynamic-table.jpg
 - dyamin-data-case-conversion.jpg
-- css-assignment.jpg
 - mvc-demo.jpg
 - devops-assignment.jpg
 - mytodo.jpg

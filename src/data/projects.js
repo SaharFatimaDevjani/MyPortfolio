@@ -7,6 +7,8 @@
 const localImage = (id) => `/projects/${id}.jpg`
 
 // Full-detail cards, best to worst. First entry is the featured/lead project.
+// Order below reflects Sahar's own ranking (Aug 2026) — see README "Project story notes"
+// for the two open questions (Product CRUD placement, and thin-README projects pending detail).
 export const projects = [
   {
     id: 'vtryfyp',
@@ -33,28 +35,6 @@ export const projects = [
     image: localImage('devjani-naturals'),
   },
   {
-    id: '10pearls-mern',
-    name: '10PearlsMERN',
-    tagline: 'Self-hosted notes app with WYSIWYG editing and real auth security',
-    description:
-      "A lightweight Evernote-style notes app built to get the security fundamentals right, not just the CRUD. Users get JWT-authenticated accounts, rich-text note editing, live search, and JSON export/import for backup and migration. Under the hood: Joi request validation, Helmet security headers, HTML sanitization to block XSS from rendered note content, and scope-based access control so one user's notes are never reachable by another. It's also the one project in this list with an actual test suite — Mocha/Chai/Supertest on the API, Jest/RTL on the frontend.",
-    tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai'],
-    github: 'https://github.com/SaharFatimaDevjani/10PearlsMERN',
-    demo: null,
-    image: localImage('10pearls-mern'),
-  },
-  {
-    id: 'hotel-management-system',
-    name: 'Hotel Management System',
-    tagline: 'Spring Boot + React booking platform with role-based access',
-    description:
-      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
-    tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
-    github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
-    demo: null,
-    image: localImage('hotel-management-system'),
-  },
-  {
     id: 'freshbaked',
     name: 'Fresh Baked',
     tagline: 'Bakery storefront with Firebase-backed admin panel — deployed live',
@@ -64,6 +44,17 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/freshbaked',
     demo: 'https://lnkd.in/dY4QS27R',
     image: localImage('freshbaked'),
+  },
+  {
+    id: '10pearls-mern',
+    name: '10PearlsMERN',
+    tagline: 'Self-hosted notes app with WYSIWYG editing and real auth security',
+    description:
+      "A lightweight Evernote-style notes app built to get the security fundamentals right, not just the CRUD. Users get JWT-authenticated accounts, rich-text note editing, live search, and JSON export/import for backup and migration. Under the hood: Joi request validation, Helmet security headers, HTML sanitization to block XSS from rendered note content, and scope-based access control so one user's notes are never reachable by another. It's also the one project in this list with an actual test suite — Mocha/Chai/Supertest on the API, Jest/RTL on the frontend.",
+    tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai'],
+    github: 'https://github.com/SaharFatimaDevjani/10PearlsMERN',
+    demo: null,
+    image: localImage('10pearls-mern'),
   },
   {
     id: 'tasty-treats',
@@ -77,6 +68,17 @@ export const projects = [
     image: localImage('tasty-treats'),
   },
   {
+    id: 'hotel-management-system',
+    name: 'Hotel Management System',
+    tagline: 'Spring Boot + React booking platform with role-based access',
+    description:
+      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
+    tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
+    github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
+    demo: null,
+    image: localImage('hotel-management-system'),
+  },
+  {
     id: 'devjanimasala',
     name: 'DevjaniMasala',
     tagline: "Django coursework storefront for my family's spice business",
@@ -86,6 +88,17 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/Devjanimasala',
     demo: null,
     image: localImage('devjanimasala'),
+  },
+  {
+    id: 'stepup',
+    name: 'StepUP',
+    tagline: 'Vanilla HTML/CSS/JS tourism site — smooth-scroll & hover animation practice, deployed live',
+    description:
+      'A tourism/travel site built during a Frontend Development course — no framework, just HTML, CSS, and JavaScript, with smooth-scroll navigation, hover-driven interactions, and CSS animations throughout. It marks the starting point of the frontend fundamentals everything else here builds on, and it was deliberate practice in attention to detail and UX polish rather than functionality.',
+    tech: ['HTML5', 'CSS3', 'JavaScript'],
+    github: 'https://github.com/SaharFatimaDevjani/StepUP',
+    demo: 'https://saharfatimadevjani.github.io/StepUP/',
+    image: localImage('stepup'),
   },
   {
     id: 'product-crud',
@@ -101,30 +114,17 @@ export const projects = [
 ]
 
 // Smaller/practice repos — still real, shown as a compact list rather than full cards.
+// edusity, snapcheck-internship, jinnahnew, and css-assignment are placed first per Sahar's
+// requested order, but stay in this compact tier (not full cards) until their descriptions
+// below are confirmed with her — see README "Project story notes".
 export const otherProjects = [
   {
-    id: 'stepup',
-    name: 'StepUP',
-    tagline: 'Vanilla HTML/CSS/JS tourism site — smooth-scroll & hover animation practice',
-    github: 'https://github.com/SaharFatimaDevjani/StepUP',
-    demo: 'https://saharfatimadevjani.github.io/StepUP/',
-    image: localImage('stepup'),
-  },
-  {
-    id: 'jinnahnew',
-    name: 'JinnahNew',
-    tagline: 'Responsive university landing page — About, Courses, Contact sections',
-    github: 'https://github.com/SaharFatimaDevjani/JinnahNew',
+    id: 'edusity',
+    name: 'Edusity',
+    tagline: 'Early-stage React scaffold for an education-platform concept',
+    github: 'https://github.com/SaharFatimaDevjani/Edusity',
     demo: null,
-    image: localImage('jinnahnew'),
-  },
-  {
-    id: 'hgfashion',
-    name: 'HGFashion',
-    tagline: 'Static HTML/CSS/JS fashion landing page',
-    github: 'https://github.com/SaharFatimaDevjani/HGFashion',
-    demo: null,
-    image: localImage('hgfashion'),
+    image: localImage('edusity'),
   },
   {
     id: 'snapcheck-internship',
@@ -135,12 +135,28 @@ export const otherProjects = [
     image: localImage('snapcheck-internship'),
   },
   {
-    id: 'edusity',
-    name: 'Edusity',
-    tagline: 'Early-stage React scaffold for an education-platform concept',
-    github: 'https://github.com/SaharFatimaDevjani/Edusity',
+    id: 'jinnahnew',
+    name: 'JinnahNew',
+    tagline: 'Responsive university landing page — About, Courses, Contact sections',
+    github: 'https://github.com/SaharFatimaDevjani/JinnahNew',
     demo: null,
-    image: localImage('edusity'),
+    image: localImage('jinnahnew'),
+  },
+  {
+    id: 'css-assignment',
+    name: 'CSSAssignment',
+    tagline: 'Advanced CSS technique coursework',
+    github: 'https://github.com/SaharFatimaDevjani/CSSAssignment',
+    demo: null,
+    image: localImage('css-assignment'),
+  },
+  {
+    id: 'hgfashion',
+    name: 'HGFashion',
+    tagline: 'Static HTML/CSS/JS fashion landing page',
+    github: 'https://github.com/SaharFatimaDevjani/HGFashion',
+    demo: null,
+    image: localImage('hgfashion'),
   },
   {
     id: 'api-development',
@@ -165,14 +181,6 @@ export const otherProjects = [
     github: 'https://github.com/SaharFatimaDevjani/DyaminDataCaseConversion',
     demo: null,
     image: localImage('dyamin-data-case-conversion'),
-  },
-  {
-    id: 'css-assignment',
-    name: 'CSSAssignment',
-    tagline: 'Advanced CSS technique coursework',
-    github: 'https://github.com/SaharFatimaDevjani/CSSAssignment',
-    demo: null,
-    image: localImage('css-assignment'),
   },
   {
     id: 'mvc-demo',
