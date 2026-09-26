@@ -1,13 +1,15 @@
-import { Mail } from 'lucide-react'
+import { FileText, Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './icons/BrandIcons'
+import { profile } from '../data/profile'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 
 const LINKS = [
-  { label: 'Email', href: 'mailto:sahardevjani635@gmail.com', icon: Mail, display: 'sahardevjani635@gmail.com' },
-  { label: 'GitHub', href: 'https://github.com/SaharFatimaDevjani', icon: GithubIcon, display: 'github.com/SaharFatimaDevjani' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/saharfatimadevjani', icon: LinkedinIcon, display: 'linkedin.com/in/saharfatimadevjani' },
-]
+  { label: 'Email', href: `mailto:${profile.email}`, icon: Mail, display: profile.email },
+  { label: 'GitHub', href: profile.github, icon: GithubIcon, display: 'github.com/SaharFatimaDevjani' },
+  { label: 'LinkedIn', href: profile.linkedin, icon: LinkedinIcon, display: 'linkedin.com/in/saharfatimadevjani' },
+  profile.resume && { label: 'Resume', href: profile.resume, icon: FileText, display: 'Download PDF' },
+].filter(Boolean)
 
 export default function Contact() {
   return (
@@ -23,8 +25,8 @@ export default function Contact() {
             <a
               key={label}
               href={href}
-              target={href.startsWith('http') ? '_blank' : undefined}
-              rel={href.startsWith('http') ? 'noreferrer' : undefined}
+              target={href.startsWith('mailto:') ? undefined : '_blank'}
+              rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
               className="group flex items-center gap-4 rounded-xl border border-line bg-surface px-5 py-4 transition-all hover:border-accent hover:-translate-y-0.5"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">

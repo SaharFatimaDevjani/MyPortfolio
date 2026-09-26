@@ -24,6 +24,7 @@ export default function Education() {
             <p className="mt-0.5 text-sm text-ink-soft">{education.school}</p>
             <p className="mt-1 font-mono text-xs text-accent">
               {education.period} &middot; {education.location}
+              {education.grade && <> &middot; {education.grade}</>}
             </p>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">{education.note}</p>
           </div>
@@ -34,7 +35,7 @@ export default function Education() {
         <h3 className="mt-12 font-mono text-xs uppercase tracking-wider text-ink-soft">
           Certifications &amp; Professional Training
         </h3>
-        <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
           {visible.map((cert) => (
             <div
               key={cert.name}

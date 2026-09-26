@@ -21,7 +21,7 @@ export default function Projects() {
           <ProjectCard project={featured} />
         </Reveal>
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {rest.map((project, i) => (
             <Reveal key={project.id} delay={0.05 * (i % 2)}>
               <ProjectCard project={project} />
@@ -35,7 +35,7 @@ export default function Projects() {
           <h3 className="font-mono text-xs uppercase tracking-wider text-ink-soft">
             More Projects &amp; Coursework
           </h3>
-          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
             {visibleOthers.map((project) => (
               <MiniProjectCard key={project.id} project={project} />
             ))}

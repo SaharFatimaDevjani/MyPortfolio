@@ -5,6 +5,9 @@ import { useEffect } from 'react'
 // Once past the hero, this gets out of the way entirely — long sections scroll normally.
 export function useHeroScrollCommit(targetId) {
   useEffect(() => {
+    // Hijacking the scroll is exactly the kind of motion reduced-motion users opt out of.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     let locked = false
     let touchStartY = null
 

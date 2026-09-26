@@ -3,6 +3,7 @@ export const education = {
   school: 'Muhammad Ali Jinnah University (MAJU)',
   period: 'Feb 2021 — Dec 2025',
   location: 'Karachi, Pakistan',
+  grade: 'CGPA 3.5',
   note: 'Self-funded — worked through a string of internships alongside coursework to pay for the degree.',
 }
 

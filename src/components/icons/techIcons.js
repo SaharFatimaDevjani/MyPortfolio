@@ -26,6 +26,14 @@ import {
   SiScikitlearn,
   SiPostgresql,
   SiWordpress,
+  SiJavascript,
+  SiHtml5,
+  SiBootstrap,
+  SiJquery,
+  SiPostman,
+  SiVercel,
+  SiCplusplus,
+  SiMediapipe,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa6'
 
@@ -68,4 +76,14 @@ export const TECH_ICONS = {
   'scikit-learn': SiScikitlearn,
   'PostgreSQL': SiPostgresql,
   'WordPress': SiWordpress,
+  'JavaScript (ES6+)': SiJavascript,
+  'HTML5 / CSS3': SiHtml5,
+  'Bootstrap': SiBootstrap,
+  'jQuery': SiJquery,
+  'Postman': SiPostman,
+  'Vercel': SiVercel,
+  'C / C++': SiCplusplus,
+  'MediaPipe': SiMediapipe,
+  'Firebase': SiFirebase,
+  'Jest / Mocha': SiJest,
 }

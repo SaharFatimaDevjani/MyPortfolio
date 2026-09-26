@@ -10,7 +10,11 @@ Everything you're likely to want to change lives in `src/data/`, not in the comp
   `tagline`, `description`, `tech`, `github`, `demo`, and `image`. Leave `image` as `null`
   to keep the generated placeholder visual, or set it to a path (e.g. after dropping a file
   in `src/assets/projects/`) to use a real screenshot/GIF instead.
-- `src/data/skills.js` — the three skill columns (Frontend / Backend / Tools & Other).
+- `src/data/profile.js` — name, current role, email, GitHub/LinkedIn links, and the resume
+  PDF. To show the **Resume** buttons, put your PDF at `public/resume.pdf` and set
+  `resume: publicUrl('resume.pdf')`.
+- `src/data/skills.js` — the four skill columns (Frontend / Backend / Languages & Data / Tools & Platforms).
+- `src/data/education.js` — degree and certifications.
 - `src/data/experience.js` — the timeline entries on the Experience section.
 
 ## Run locally
