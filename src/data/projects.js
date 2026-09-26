@@ -4,7 +4,9 @@
 // (matching the `id` below, e.g. public/projects/vtryfyp.jpg) — no code change needed.
 // Until that file exists, the card automatically falls back to a generated placeholder.
 
-const localImage = (id) => `/projects/${id}.jpg`
+import { publicUrl } from './profile'
+
+const localImage = (id) => publicUrl(`projects/${id}.jpg`)
 
 // Full-detail cards, best to worst. First entry is the featured/lead project.
 // Order below reflects Sahar's own ranking (Aug 2026) — see README "Project story notes"
@@ -144,10 +146,10 @@ export const otherProjects = [
   },
   {
     id: 'css-assignment',
-    name: 'CSSAssignment',
-    tagline: 'Advanced CSS technique coursework',
+    name: 'Roran',
+    tagline: 'Pure HTML/CSS website — foundational layout & styling coursework',
     github: 'https://github.com/SaharFatimaDevjani/CSSAssignment',
-    demo: null,
+    demo: 'https://saharfatimadevjani.github.io/CSSAssignment/',
     image: localImage('css-assignment'),
   },
   {

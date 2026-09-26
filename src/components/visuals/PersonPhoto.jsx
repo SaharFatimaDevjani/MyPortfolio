@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { publicUrl } from '../../data/profile'
 
 // Looks for a real headshot at /headshot.jpg (drop it in the public/ folder — no code
 // change needed). Falls back to a styled monogram so the hero still looks intentional
@@ -15,7 +16,7 @@ export default function PersonPhoto({ name, className = '' }) {
   if (failed) {
     return (
       <div
-        className={`flex items-center justify-center bg-gradient-to-br from-accent/25 via-accent-dim/15 to-transparent font-mono text-5xl font-bold text-accent ${className}`}
+        className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/25 via-accent-dim/15 to-transparent font-mono text-5xl font-bold text-accent ${className}`}
       >
         {initials}
       </div>
@@ -24,7 +25,7 @@ export default function PersonPhoto({ name, className = '' }) {
 
   return (
     <img
-      src="/headshot.jpg"
+      src={publicUrl('headshot.jpg')}
       alt={name}
       onError={() => setFailed(true)}
       className={`h-full w-full object-cover ${className}`}
