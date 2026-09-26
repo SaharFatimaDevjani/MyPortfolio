@@ -116,8 +116,7 @@ export default function Hero() {
             {profile.resume && (
               <a
                 href={profile.resume}
-                target="_blank"
-                rel="noreferrer"
+                download={profile.resumeFileName}
                 className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
               >
                 <FileText size={15} />
