@@ -8,7 +8,7 @@ const LINKS = [
   { label: 'Email', href: `mailto:${profile.email}`, icon: Mail, display: profile.email },
   { label: 'GitHub', href: profile.github, icon: GithubIcon, display: 'github.com/SaharFatimaDevjani' },
   { label: 'LinkedIn', href: profile.linkedin, icon: LinkedinIcon, display: 'linkedin.com/in/saharfatimadevjani' },
-  profile.resume && { label: 'Resume', href: profile.resume, icon: FileText, display: 'Download PDF' },
+  profile.resume && { label: 'Resume', href: profile.resume, icon: FileText, display: 'Download PDF', download: profile.resumeFileName },
 ].filter(Boolean)
 
 export default function Contact() {
@@ -21,10 +21,11 @@ export default function Contact() {
         </p>
 
         <div className="mt-8 flex flex-col gap-3">
-          {LINKS.map(({ label, href, icon: Icon, display }) => (
+          {LINKS.map(({ label, href, icon: Icon, display, download }) => (
             <a
               key={label}
               href={href}
+              download={download}
               target={href.startsWith('mailto:') ? undefined : '_blank'}
               rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
               className="group flex items-center gap-4 rounded-xl border border-line bg-surface px-5 py-4 transition-all hover:border-accent hover:-translate-y-0.5"
