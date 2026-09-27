@@ -11,8 +11,8 @@ Everything you're likely to want to change lives in `src/data/`, not in the comp
   to keep the generated placeholder visual, or set it to a path (e.g. after dropping a file
   in `src/assets/projects/`) to use a real screenshot/GIF instead.
 - `src/data/profile.js` — name, current role, email, and GitHub/LinkedIn links.
-- `src/assets/resume/Sahar_Fatima_Devjani.pdf` — your CV. Drop the PDF in that folder and the
-  **Resume** download buttons appear automatically; replace the file to update it.
+- `public/Sahar_Fatima_Devjani.pdf` — your CV, behind the **Resume** download buttons. To update
+  it, replace this file with the new one (keep the same name).
 - `public/headshot.jpg` — the hero photo (square works best).
 - `src/data/skills.js` — the four skill columns (Frontend / Backend / Languages & Data / Tools & Platforms).
 - `src/data/education.js` — degree and certifications.
