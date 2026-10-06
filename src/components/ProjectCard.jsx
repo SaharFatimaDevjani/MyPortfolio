@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './icons/BrandIcons'
 import ProjectImage from './visuals/ProjectImage'
+import ThemeOverlay from './visuals/ThemeOverlay'
 
 function TechList({ tech }) {
   return (
@@ -86,8 +87,7 @@ function FeaturedCard({ project }) {
                 the placeholder mockup a size if the screenshot is missing. */}
             <div className="relative aspect-[2/1]">
               <ProjectImage src={image} alt={`${name} preview`} name={name} position="top" />
-              {/* light theme-colored veil so the screenshot sits in the page's palette */}
-              <div className="pointer-events-none absolute inset-0 bg-bg/5 dark:bg-bg/25 transition-opacity duration-500 group-hover:opacity-0" />
+              <ThemeOverlay />
             </div>
           </div>
         </div>
@@ -127,12 +127,8 @@ export default function ProjectCard({ project }) {
         <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
           <ProjectImage src={image} alt={`${name} preview`} name={name} position={imagePosition} />
         </div>
-        {/* Uniform color-grade wash so screenshots from very different sites still read as one set.
-            The bg-tinted veil follows the theme (dark in dark mode, light in light mode) so bright
-            screenshots don't break the page's palette; it lifts on hover to show the real colors. */}
-        <div className="pointer-events-none absolute inset-0 bg-bg/10 dark:bg-bg/40 transition-opacity duration-500 group-hover:opacity-30" />
+        <ThemeOverlay />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bg/40 via-transparent to-transparent dark:from-bg/80 dark:via-bg/10" />
-        <div className="pointer-events-none absolute inset-0 bg-accent/10 mix-blend-overlay" />
       </div>
 
       <div className="flex flex-1 flex-col p-6">
