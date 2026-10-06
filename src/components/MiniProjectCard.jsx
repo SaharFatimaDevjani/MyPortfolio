@@ -9,6 +9,7 @@ export default function MiniProjectCard({ project }) {
     <div className="group flex items-center gap-4 rounded-xl border border-line bg-surface p-3 transition-colors hover:border-accent/50">
       <div className="relative h-16 w-24 shrink-0 overflow-hidden rounded-lg">
         <ProjectImage src={image} alt={`${name} preview`} name={name} />
+        <div className="pointer-events-none absolute inset-0 bg-bg/10 dark:bg-bg/40 transition-opacity duration-500 group-hover:opacity-30" />
         <div className="pointer-events-none absolute inset-0 bg-accent/10 mix-blend-overlay" />
       </div>
 
