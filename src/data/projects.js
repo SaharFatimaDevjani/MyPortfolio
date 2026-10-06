@@ -2,6 +2,8 @@
 // IMAGES: to show a real screenshot for a project, save it as
 //   public/projects/<id>.jpg
 // (matching the `id` below, e.g. public/projects/vtryfyp.jpg) — no code change needed.
+// Optional `imagePosition` (CSS object-position, e.g. 'left center') picks which part of
+// the screenshot stays visible when the card crops it.
 // Until that file exists, the card automatically falls back to a generated placeholder.
 
 import { publicUrl } from './profile'
@@ -23,6 +25,9 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
     image: localImage('vtryfyp'),
+    // The featured card crops the image into a tall panel on desktop; anchor left so
+    // the logo and headline stay in view.
+    imagePosition: 'left center',
   },
   {
     id: 'devjani-naturals',

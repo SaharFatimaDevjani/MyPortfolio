@@ -4,7 +4,7 @@ import { GithubIcon } from './icons/BrandIcons'
 import ProjectImage from './visuals/ProjectImage'
 
 export default function ProjectCard({ project }) {
-  const { id, name, tagline, description, tech, github, demo, demoLabel, image, featured } = project
+  const { id, name, tagline, description, tech, github, demo, demoLabel, image, imagePosition, featured } = project
 
   return (
     <motion.article
@@ -17,7 +17,7 @@ export default function ProjectCard({ project }) {
     >
       <div className={`relative overflow-hidden ${featured ? 'aspect-video lg:aspect-auto lg:w-[46%]' : 'aspect-video'}`}>
         <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
-          <ProjectImage src={image} alt={`${name} preview`} name={name} />
+          <ProjectImage src={image} alt={`${name} preview`} name={name} position={imagePosition} />
         </div>
         {/* Uniform color-grade wash so screenshots from very different sites still read as one set.
             The bg-tinted veil follows the theme (dark in dark mode, light in light mode) so bright
@@ -27,7 +27,7 @@ export default function ProjectCard({ project }) {
         <div className="pointer-events-none absolute inset-0 bg-accent/10 mix-blend-overlay" />
 
         {featured && (
-          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-ink shadow-lg">
+          <span className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-accent px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-accent-ink shadow-lg">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent-ink" />
             Featured
           </span>
