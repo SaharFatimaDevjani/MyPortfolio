@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Download, Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 import { useActiveSection } from '../hooks/useActiveSection'
+import { profile } from '../data/profile'
 
 const LINKS = [
   { href: '#about', label: 'About' },
@@ -30,7 +31,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
       <nav
-        className={`flex w-full max-w-3xl items-center justify-between rounded-full border px-5 py-2.5 transition-all duration-300 ${
+        className={`flex w-full max-w-4xl items-center justify-between rounded-full border px-5 py-2.5 transition-all duration-300 ${
           scrolled
             ? 'border-line bg-surface/80 shadow-lg shadow-black/5 backdrop-blur-md'
             : 'border-transparent bg-transparent'
@@ -66,7 +67,18 @@ export default function Navbar({ theme, onToggleTheme }) {
           })}
         </ul>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2 sm:gap-3">
+          {profile.resume && (
+            <a
+              href={profile.resume}
+              download={profile.resumeFileName}
+              aria-label="Download resume"
+              className="inline-flex h-9 items-center gap-1.5 rounded-full bg-accent px-3.5 text-xs font-semibold text-accent-ink transition-transform hover:scale-105 active:scale-95"
+            >
+              <Download size={14} />
+              <span className="md:hidden lg:inline">Resume</span>
+            </a>
+          )}
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <button
             type="button"
