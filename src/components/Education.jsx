@@ -43,11 +43,7 @@ export default function Education() {
             >
               <p className="text-sm font-semibold text-ink">{cert.name}</p>
               <p className="mt-0.5 font-mono text-[11px] text-ink-soft">{cert.issuer}</p>
-              {cert.courses && (
-                <p className="mt-2 text-xs leading-relaxed text-ink-soft">
-                  Includes: {cert.courses.join(' · ')}
-                </p>
-              )}
+              <p className="mt-2 text-xs leading-relaxed text-ink-soft">{cert.topics}</p>
             </div>
           ))}
         </div>
