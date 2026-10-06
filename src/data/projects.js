@@ -25,9 +25,6 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
     image: localImage('vtryfyp'),
-    // The featured card crops the image into a tall panel on desktop; anchor left so
-    // the logo and headline stay in view.
-    imagePosition: 'left center',
   },
   {
     id: 'devjani-naturals',
