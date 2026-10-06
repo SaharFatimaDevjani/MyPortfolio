@@ -15,7 +15,6 @@ export const certifications = [
     issuer: 'Meta · Coursera',
     topics: 'HTML, CSS, JavaScript, React basics, and version control with Git',
   },
-  { name: 'IELTS — Overall Band 8.0', issuer: 'IELTS', topics: 'English proficiency across listening, reading, writing, and speaking' },
   { name: 'Node.js Certificate', issuer: 'MindLuster', topics: 'Node.js fundamentals, modules, and building server-side applications' },
   { name: 'Getting Started with NodeJS', issuer: 'SimpliLearn', topics: 'Node.js basics, npm, and the core runtime modules' },
   { name: 'Crash Course on Python', issuer: 'Google · Coursera', topics: 'Python programming, strings, lists, and dictionaries' },
