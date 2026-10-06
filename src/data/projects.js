@@ -59,15 +59,15 @@ export const projects = [
     image: localImage('10pearls-mern'),
   },
   {
-    id: 'tasty-treats',
-    name: 'Tasty Treats',
+    id: 'mern-product-manager',
+    name: 'MERN Product Manager',
     tagline: 'Full-stack product catalog with end-to-end CRUD',
     description:
       'A product management site covering the full MERN loop — a React frontend across Home, About, Products, and Contact pages talking to an Express/MongoDB REST API for create, read, update, and delete. Built with form validation on both empty fields and email format, it was where I first wired up a complete client-to-database round trip on my own rather than following a course template.',
     tech: ['React', 'Node.js', 'Express', 'MongoDB', 'REST API'],
     github: 'https://github.com/SaharFatimaDevjani/MERN_Application',
     demo: null,
-    image: localImage('tasty-treats'),
+    image: localImage('mern-product-manager'),
   },
   {
     id: 'hotel-management-system',
@@ -185,12 +185,12 @@ export const otherProjects = [
     image: localImage('dyamin-data-case-conversion'),
   },
   {
-    id: 'mvc-demo',
-    name: 'MVCDemo',
-    tagline: 'ASP.NET MVC snack-inventory demo — coursework in the MVC pattern',
+    id: 'tasty-treats',
+    name: 'Tasty Treats',
+    tagline: 'ASP.NET Core MVC + Entity Framework CRUD app (MVCDemo repo)',
     github: 'https://github.com/SaharFatimaDevjani/MVCDemo',
     demo: null,
-    image: localImage('mvc-demo'),
+    image: localImage('tasty-treats'),
   },
   {
     id: 'devops-assignment',
