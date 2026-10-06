@@ -13,7 +13,7 @@ Until a file exists, that project shows a generated placeholder instead.
 - devjani-naturals.jpg
 - freshbaked.jpg
 - 10pearls-mern.jpg
-- tasty-treats.jpg
+- mern-product-manager.jpg
 - hotel-management-system.jpg
 - devjanimasala.jpg
 - stepup.jpg
@@ -28,7 +28,7 @@ Until a file exists, that project shows a generated placeholder instead.
 - api-development.jpg
 - react-dynamic-table.jpg
 - dyamin-data-case-conversion.jpg
-- mvc-demo.jpg
+- tasty-treats.jpg
 - devops-assignment.jpg
 - mytodo.jpg
 
