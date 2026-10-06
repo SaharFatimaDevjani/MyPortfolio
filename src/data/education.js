@@ -7,22 +7,22 @@ export const education = {
   note: 'Self-funded — worked through a string of internships alongside coursework to pay for the degree.',
 }
 
-// `courses` groups a multi-course specialization/professional-certificate under one card
-// instead of listing each course as its own entry — keeps the section from ballooning.
+// Every certification gets a one-line `topics` summary so the cards read consistently.
+// Topics marked on the resume are used as-is; the rest describe the course's subject.
 export const certifications = [
   {
     name: 'Front-End Developer Professional Certificate',
     issuer: 'Meta · Coursera',
-    courses: ['Introduction to Front-End Development', 'Programming with JavaScript', 'React Basics', 'Version Control'],
+    topics: 'HTML, CSS, JavaScript, React basics, and version control with Git',
   },
-  { name: 'Node.js Certificate', issuer: 'MindLuster' },
-  { name: 'Getting Started with NodeJS', issuer: 'SimpliLearn' },
-  { name: 'Crash Course on Python', issuer: 'Google · Coursera' },
-  { name: 'Introduction to Relational Database and SQL', issuer: 'Coursera' },
-  { name: 'Structured Query Language (SQL)', issuer: 'UC Boulder' },
-  { name: 'Frontend Development', issuer: 'CodeGirls · ConsulNet' },
-  { name: 'Python Programming (Django, MySQL)', issuer: 'CodeGirls · ConsulNet' },
-  { name: 'WordPress Development', issuer: 'CodeGirls · ConsulNet' },
-  { name: 'Certificate in Entrepreneurial Development', issuer: 'Institute of Business Administration (IBA)' },
-  { name: 'Certificate in Eureka English', issuer: 'Eureka' },
+  { name: 'Node.js Certificate', issuer: 'MindLuster', topics: 'Node.js fundamentals, modules, and building server-side applications' },
+  { name: 'Getting Started with NodeJS', issuer: 'SimpliLearn', topics: 'Node.js basics, npm, and the core runtime modules' },
+  { name: 'Crash Course on Python', issuer: 'Google · Coursera', topics: 'Python programming, strings, lists, and dictionaries' },
+  { name: 'Introduction to Relational Database and SQL', issuer: 'Coursera', topics: 'Relational database concepts, tables and keys, and basic SQL queries' },
+  { name: 'Structured Query Language (SQL)', issuer: 'CU Boulder', topics: 'SQL fundamentals, queries, joins, and database design' },
+  { name: 'Frontend Development', issuer: 'CodeGirls · ConsulNet', topics: 'HTML, CSS, JavaScript, and jQuery' },
+  { name: 'Python Programming', issuer: 'CodeGirls · ConsulNet', topics: 'Python programming, Django, and MySQL' },
+  { name: 'WordPress Development', issuer: 'CodeGirls · ConsulNet', topics: 'Building websites with WordPress and plugins' },
+  { name: 'Certificate in Entrepreneurial Development', issuer: 'Institute of Business Administration (IBA)', topics: 'Entrepreneurship fundamentals and business planning' },
+  { name: 'Certificate in Eureka English', issuer: 'Eureka', topics: 'Spoken English, pronunciation, grammar, and accent' },
 ]
