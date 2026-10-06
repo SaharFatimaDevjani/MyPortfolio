@@ -16,9 +16,24 @@ export default function ProjectCard({ project }) {
       }`}
     >
       <div className={`relative overflow-hidden ${featured ? 'aspect-video lg:aspect-auto lg:w-[46%]' : 'aspect-video'}`}>
-        <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
-          <ProjectImage src={image} alt={`${name} preview`} name={name} position={imagePosition} />
-        </div>
+        {featured ? (
+          // Featured panel is tall on desktop, so a cover crop would cut the screenshot's sides.
+          // Instead show the whole screenshot centered, over a blurred copy that fills the panel.
+          <>
+            <div className="absolute inset-0 scale-110 opacity-60 blur-2xl" aria-hidden="true">
+              <ProjectImage src={image} alt="" name={name} />
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center p-5 sm:p-8">
+              <div className="aspect-video w-full overflow-hidden rounded-lg shadow-2xl shadow-black/40 ring-1 ring-line transition-transform duration-500 ease-out group-hover:scale-[1.03]">
+                <ProjectImage src={image} alt={`${name} preview`} name={name} position={imagePosition} />
+              </div>
+            </div>
+          </>
+        ) : (
+          <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
+            <ProjectImage src={image} alt={`${name} preview`} name={name} position={imagePosition} />
+          </div>
+        )}
         {/* Uniform color-grade wash so screenshots from very different sites still read as one set.
             The bg-tinted veil follows the theme (dark in dark mode, light in light mode) so bright
             screenshots don't break the page's palette; it lifts on hover to show the real colors. */}
