@@ -62,7 +62,7 @@ export const projects = [
   },
   {
     id: 'mern-product-manager',
-    name: 'MERN Product Manager',
+    name: 'Heaven Traders',
     tagline: 'Full-stack product catalog with end-to-end CRUD',
     description:
       'A product management site covering the full MERN loop — a React frontend across Home, About, Products, and Contact pages talking to an Express/MongoDB REST API for create, read, update, and delete. Built with form validation on both empty fields and email format, it was where I first wired up a complete client-to-database round trip on my own rather than following a course template.',
@@ -70,28 +70,6 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/MERN_Application',
     demo: null,
     image: localImage('mern-product-manager'),
-  },
-  {
-    id: 'hotel-management-system',
-    name: 'Hotel Management System',
-    tagline: 'Spring Boot + React booking platform with role-based access',
-    description:
-      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
-    tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
-    github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
-    demo: null,
-    image: localImage('hotel-management-system'),
-  },
-  {
-    id: 'devjanimasala',
-    name: 'DevjaniMasala',
-    tagline: "Django coursework storefront for my family's spice business",
-    description:
-      "A separate, earlier Django-powered product catalog and admin panel — same family business as Devjani Naturals in concept, but a different build (this one was a course project, not the live site). Authenticated admin access for managing listings, a template-driven storefront on the customer side, and structured with future e-commerce features — cart, checkout, payments — in mind. It was my first real project outside the MERN stack, working with Django's ORM and templating instead.",
-    tech: ['Python', 'Django', 'SQLite', 'Django Templates'],
-    github: 'https://github.com/SaharFatimaDevjani/Devjanimasala',
-    demo: null,
-    image: localImage('devjanimasala'),
   },
   {
     id: 'stepup',
@@ -114,6 +92,28 @@ export const projects = [
     github: 'https://github.com/SaharFatimaDevjani/Product_crud',
     demo: 'https://saharfatimadevjani.github.io/Product_crud/',
     image: localImage('product-crud'),
+  },
+  {
+    id: 'hotel-management-system',
+    name: 'Hotel Management System',
+    tagline: 'Spring Boot + React booking platform with role-based access',
+    description:
+      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
+    tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
+    github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
+    demo: null,
+    image: localImage('hotel-management-system'),
+  },
+  {
+    id: 'devjanimasala',
+    name: 'DevjaniMasala',
+    tagline: "Django coursework storefront for my family's spice business",
+    description:
+      "A separate, earlier Django-powered product catalog and admin panel — same family business as Devjani Naturals in concept, but a different build (this one was a course project, not the live site). Authenticated admin access for managing listings, a template-driven storefront on the customer side, and structured with future e-commerce features — cart, checkout, payments — in mind. It was my first real project outside the MERN stack, working with Django's ORM and templating instead.",
+    tech: ['Python', 'Django', 'SQLite', 'Django Templates'],
+    github: 'https://github.com/SaharFatimaDevjani/Devjanimasala',
+    demo: null,
+    image: localImage('devjanimasala'),
   },
 ]
 
