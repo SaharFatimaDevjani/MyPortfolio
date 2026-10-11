@@ -51,11 +51,11 @@ export const projects = [
   },
   {
     id: '10pearls-mern',
-    name: '10PearlsMERN',
-    tagline: 'Self-hosted notes app with WYSIWYG editing and real auth security',
+    name: 'Secure Notes App',
+    tagline: 'Final project for the 10Pearls Shine Internship Program — rich-text notes with real auth security',
     description:
-      "A lightweight Evernote-style notes app built to get the security fundamentals right, not just the CRUD. Users get JWT-authenticated accounts, rich-text note editing, live search, and JSON export/import for backup and migration. Under the hood: Joi request validation, Helmet security headers, HTML sanitization to block XSS from rendered note content, and scope-based access control so one user's notes are never reachable by another. It's also the one project in this list with an actual test suite — Mocha/Chai/Supertest on the API, Jest/RTL on the frontend.",
-    tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai'],
+      "Built as my final project for the 10Pearls Shine Internship Program: an Evernote-style notes app designed to get the security fundamentals right, not just the CRUD. Users get JWT-authenticated accounts, rich-text note editing, live search, a profile page, and JSON export/import for backup and migration. Under the hood: Joi request validation, Helmet security headers, HTML sanitization to block XSS from rendered note content, and scope-based access control so one user's notes are never reachable by another. Code quality was part of the brief too — global exception handling, structured logging with Pino, SonarQube analysis, and the one real test suite on this page: Mocha/Chai/Supertest on the API, Jest/RTL on the frontend.",
+    tech: ['React 19', 'Vite', 'Tailwind CSS', 'React Router', 'Node.js', 'Express 5', 'MongoDB', 'JWT', 'Joi', 'Mocha/Chai', 'Jest', 'SonarQube'],
     github: 'https://github.com/SaharFatimaDevjani/10PearlsMERN',
     demo: null,
     image: localImage('10pearls-mern'),
