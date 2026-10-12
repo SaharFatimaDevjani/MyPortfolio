@@ -48,11 +48,6 @@ export const certificationGroups = [
   {
     category: 'Language',
     items: [
-      {
-        name: 'IELTS Preparation Specialization',
-        issuer: 'UC Irvine · Coursera',
-        courses: ['IELTS Reading Section Skills Mastery'],
-      },
       { name: 'Certificate in Eureka English', issuer: 'Eureka', topics: 'Spoken English, pronunciation, grammar, and accent' },
     ],
   },

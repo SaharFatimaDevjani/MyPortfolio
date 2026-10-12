@@ -18,8 +18,8 @@ export default function About() {
             computer vision to e-commerce: an in-browser virtual try-on for accessories.
           </p>
           <p>
-            I'm currently learning machine learning and plan to pursue a master's degree in Germany to
-            take that further. I care about clean, maintainable code and software that real people use.
+            I'm currently learning machine learning and looking for ways to bring it into the products I
+            build. I care about clean, maintainable code and software that real people use.
           </p>
         </div>
       </Reveal>
