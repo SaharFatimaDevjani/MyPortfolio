@@ -15,9 +15,11 @@ export default function TechIcon({ name, size = 20 }) {
   return (
     <span
       title={name}
+      role="img"
+      aria-label={name}
       className="flex h-8 w-8 items-center justify-center rounded-md border border-line bg-surface text-ink-soft transition-colors hover:border-accent hover:text-accent"
     >
-      <Icon size={size} />
+      <Icon size={size} aria-hidden="true" />
     </span>
   )
 }

@@ -3,7 +3,7 @@
 export const skillGroups = [
   {
     category: 'Frontend',
-    skills: ['React', 'Next.js', 'Vue.js', 'JavaScript (ES6+)', 'HTML5 / CSS3', 'Tailwind CSS', 'Bootstrap', 'jQuery'],
+    skills: ['React', 'Next.js', 'Vue.js', 'JavaScript (ES6+)', 'HTML5 / CSS3', 'Tailwind CSS', 'Bootstrap'],
   },
   {
     category: 'Backend',

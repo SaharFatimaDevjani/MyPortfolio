@@ -18,9 +18,9 @@ export const projects = [
     id: 'vtryfyp',
     featured: true,
     name: 'VTryFYP',
-    tagline: 'Eyewear e-commerce with real-time, client-side virtual try-on',
+    tagline: 'Accessories e-commerce with real-time, in-browser virtual try-on',
     description:
-      "My final-year project and flagship build: a full-stack accessories store where customers try on glasses through their webcam before buying — no app install, no server round-trip per frame. The try-on runs entirely client-side on Google's MediaPipe Face Landmarker, tracking facial landmarks in real time and rendering the overlay to canvas every frame, with exponential smoothing to kill jitter and admin-configurable scale/rotation/offset per product for accurate calibration. The admin side includes a live camera preview for tuning overlays, plus full product, category, and order management. Earrings and necklace try-on are scaffolded in the data model as the next feature.",
+      "My final-year project and flagship build: a full-stack accessories store where customers try products on through their webcam before buying — no app install, no server round-trip per frame. The try-on runs entirely client-side on Google's MediaPipe Face Landmarker, tracking facial landmarks in real time and rendering the overlay to canvas every frame, with exponential smoothing to kill jitter and admin-configurable scale/rotation/offset per product for accurate calibration. The admin side includes a live camera preview for tuning overlays, plus full product, category, and order management. The try-on engine is built for accessories in general: glasses are live to try today, and other accessories such as earrings and necklaces are planned next.",
     tech: ['React 18', 'Vite', 'Tailwind CSS', 'Storefront UI', 'MediaPipe', 'Node.js', 'Express 5', 'MongoDB', 'Mongoose', 'JWT', 'Cloudinary'],
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
@@ -43,7 +43,7 @@ export const projects = [
     name: 'Fresh Baked',
     tagline: 'Bakery storefront with Firebase-backed admin panel — deployed live',
     description:
-      "A bakery portfolio site built as a CodeGirls capstone, with an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
+      "A bakery site I built at the end of my React course as a capstone project, with an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
     tech: ['React', 'Vite', 'Tailwind CSS', 'Firebase Auth', 'Firestore', 'React Router', 'Framer Motion'],
     github: 'https://github.com/SaharFatimaDevjani/freshbaked',
     demo: 'https://freshbaked.vercel.app/',
@@ -127,7 +127,7 @@ export const otherProjects = [
     name: 'Edusity',
     tagline: 'React education-platform concept, built during my RobX AI internship',
     github: 'https://github.com/SaharFatimaDevjani/Edusity',
-    demo: null,
+    demo: 'https://edusity-liard-eight.vercel.app/',
     image: localImage('edusity'),
   },
   {
@@ -135,7 +135,7 @@ export const otherProjects = [
     name: 'SnapCheckInternship',
     tagline: 'Next.js + Tailwind app, also built during my RobX AI internship',
     github: 'https://github.com/SaharFatimaDevjani/SnapCheckInternship',
-    demo: null,
+    demo: 'https://snap-check-internship.vercel.app/',
     image: localImage('snapcheck-internship'),
   },
   {
@@ -143,7 +143,7 @@ export const otherProjects = [
     name: 'JinnahNew',
     tagline: 'Responsive university landing page — About, Courses, Contact sections',
     github: 'https://github.com/SaharFatimaDevjani/JinnahNew',
-    demo: null,
+    demo: 'https://saharfatimadevjani.github.io/JinnahNew/',
     image: localImage('jinnahnew'),
   },
   {
@@ -159,7 +159,7 @@ export const otherProjects = [
     name: 'HGFashion',
     tagline: 'Static HTML/CSS/JS fashion landing page',
     github: 'https://github.com/SaharFatimaDevjani/HGFashion',
-    demo: null,
+    demo: 'https://saharfatimadevjani.github.io/HGFashion/',
     image: localImage('hgfashion'),
   },
   {

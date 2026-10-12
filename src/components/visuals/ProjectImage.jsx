@@ -16,6 +16,7 @@ export default function ProjectImage({ src, alt, name, position, className = '' 
       src={src}
       alt={alt}
       loading="lazy"
+      decoding="async"
       onError={() => setFailed(true)}
       style={position ? { objectPosition: position } : undefined}
       className={`h-full w-full object-cover saturate-[0.9] contrast-[1.05] ${className}`}

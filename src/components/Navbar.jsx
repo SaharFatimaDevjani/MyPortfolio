@@ -21,6 +21,19 @@ export default function Navbar({ theme, onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const active = useActiveSection(SECTION_IDS)
 
+  // Close the phone menu with Escape, and if the window grows past the phone breakpoint.
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => e.key === 'Escape' && setOpen(false)
+    const onResize = () => window.innerWidth >= 768 && setOpen(false)
+    window.addEventListener('keydown', onKey)
+    window.addEventListener('resize', onResize)
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      window.removeEventListener('resize', onResize)
+    }
+  }, [open])
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     onScroll()
@@ -31,6 +44,7 @@ export default function Navbar({ theme, onToggleTheme }) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4">
       <nav
+        aria-label="Main"
         className={`flex w-full max-w-4xl items-center justify-between rounded-full border px-5 py-2.5 transition-all duration-300 ${
           scrolled
             ? 'border-line bg-surface/80 shadow-lg shadow-black/5 backdrop-blur-md'
@@ -82,8 +96,10 @@ export default function Navbar({ theme, onToggleTheme }) {
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <button
             type="button"
-            className="text-ink md:hidden"
-            aria-label="Toggle menu"
+            className="flex h-9 w-9 items-center justify-center rounded-full text-ink md:hidden"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
           >
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -93,6 +109,7 @@ export default function Navbar({ theme, onToggleTheme }) {
 
       {open && (
         <motion.ul
+          id="mobile-menu"
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}

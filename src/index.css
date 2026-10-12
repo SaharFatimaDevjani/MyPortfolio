@@ -6,15 +6,20 @@
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
 
-  --color-accent: #38bdf8;
-  --color-accent-dim: #0ea5e9;
-  --color-accent-ink: #041521;
+  /* Accent tokens are per theme: these are the light-mode values (deep blue that stays
+     readable on the light background — 5.8:1 on bg, 6.7:1 on cards); .dark below swaps in
+     the brighter sky blue. accent-ink is the text color used ON an accent fill. */
+  --color-accent: #0b5f9e;
+  --color-accent-dim: #0284c7;
+  --color-accent-ink: #ffffff;
 
   --color-bg: #eef0f4;
   --color-surface: #ffffff;
   --color-ink: #0a0a0a;
   --color-ink-soft: #52525b;
   --color-line: #d7dae2;
+  /* Borders that outline interactive controls (outline buttons, toggles) need 3:1 contrast. */
+  --color-line-strong: #858c9b;
 
   --animate-blink: blink 1.05s step-end infinite;
   --animate-marquee: marquee 22s linear infinite;
@@ -40,6 +45,10 @@
 }
 
 .dark {
+  --color-accent: #38bdf8;
+  --color-accent-dim: #0ea5e9;
+  --color-accent-ink: #041521;
+  --color-line-strong: #636a87;
   --color-bg: #090a14;
   --color-surface: #10121e;
   --color-ink: #f4f5f7;
@@ -66,6 +75,13 @@ body {
   transition:
     background-color 0.25s ease,
     color 0.25s ease;
+}
+
+/* Visible keyboard focus everywhere (mouse clicks don't trigger :focus-visible). */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
 ::selection {

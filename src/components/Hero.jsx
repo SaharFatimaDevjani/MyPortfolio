@@ -109,7 +109,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="rounded-full border border-line px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+              className="rounded-full border border-line-strong px-6 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
             >
               Get in Touch
             </a>
@@ -117,7 +117,7 @@ export default function Hero() {
               <a
                 href={profile.resume}
                 download={profile.resumeFileName}
-                className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
+                className="inline-flex items-center gap-2 rounded-full border border-line-strong px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent"
               >
                 <FileText size={15} />
                 Resume
@@ -131,7 +131,7 @@ export default function Hero() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line-strong text-ink-soft transition-colors hover:border-accent hover:text-accent"
                 >
                   <Icon size={16} />
                 </a>
@@ -148,7 +148,7 @@ export default function Hero() {
           >
             <div className="flex w-max animate-marquee gap-8">
               {[...TICKER, ...TICKER].map((item, i) => (
-                <span key={i} className="font-mono text-xs uppercase tracking-wider text-ink-soft/60">
+                <span key={i} className="font-mono text-xs uppercase tracking-wider text-ink-soft/90">
                   {item}
                 </span>
               ))}

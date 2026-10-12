@@ -3,7 +3,7 @@
 // as part of one consistent brand rather than a grab-bag of placeholder colors.
 export default function ProjectMockup({ name, className = '' }) {
   return (
-    <div className={`flex h-full w-full flex-col bg-surface ${className}`}>
+    <div role="img" aria-label={`${name} — screenshot coming soon`} className={`flex h-full w-full flex-col bg-surface ${className}`}>
       <div className="flex items-center gap-1.5 border-b border-line px-3 py-2">
         <span className="h-2 w-2 rounded-full bg-ink-soft/30" />
         <span className="h-2 w-2 rounded-full bg-ink-soft/30" />
