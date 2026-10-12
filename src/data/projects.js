@@ -11,8 +11,7 @@ import { publicUrl } from './profile'
 const localImage = (id) => publicUrl(`projects/${id}.jpg`)
 
 // Full-detail cards, best to worst. First entry is the featured/lead project.
-// Order below reflects Sahar's own ranking (Aug 2026) — see README "Project story notes"
-// for the two open questions (Product CRUD placement, and thin-README projects pending detail).
+// Projects that still use the placeholder image sit at the end of the list.
 export const projects = [
   {
     id: 'vtryfyp',
@@ -118,9 +117,7 @@ export const projects = [
 ]
 
 // Smaller/practice repos — still real, shown as a compact list rather than full cards.
-// edusity, snapcheck-internship, jinnahnew, and css-assignment are placed first per Sahar's
-// requested order, but stay in this compact tier (not full cards) until their descriptions
-// below are confirmed with her — see README "Project story notes".
+// Live, deployed ones come first.
 export const otherProjects = [
   {
     id: 'edusity',

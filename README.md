@@ -7,9 +7,9 @@ Personal portfolio site built with React, Vite, Tailwind CSS, and Framer Motion.
 Everything you're likely to want to change lives in `src/data/`, not in the components:
 
 - `src/data/projects.js` — project cards, ordered best to worst. Each entry has `name`,
-  `tagline`, `description`, `tech`, `github`, `demo`, and `image`. Leave `image` as `null`
-  to keep the generated placeholder visual, or set it to a path (e.g. after dropping a file
-  in `src/assets/projects/`) to use a real screenshot/GIF instead.
+  `tagline`, `description`, `tech`, `github`, `demo` (live URL, or `null` to hide the button),
+  and `image`. To add a screenshot, save it as `public/projects/<id>.jpg` (see
+  `public/projects/README.md`); until then the card shows a generated placeholder.
 - `src/data/profile.js` — name, current role, email, and GitHub/LinkedIn links.
 - `public/Sahar_Fatima_Devjani.pdf` — your CV, behind the **Resume** download buttons. To update
   it, replace this file with the new one (keep the same name).
