@@ -25,6 +25,7 @@ export default function MiniProjectCard({ project }) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${name} on GitHub`}
+            title="View code"
             className="flex h-8 w-8 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-accent/10 hover:text-accent"
           >
             <GithubIcon size={15} />
@@ -36,6 +37,7 @@ export default function MiniProjectCard({ project }) {
             target="_blank"
             rel="noreferrer"
             aria-label={`${name} live demo`}
+            title="Live demo"
             className="flex h-8 w-8 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-accent/10 hover:text-accent"
           >
             <ArrowUpRight size={15} />

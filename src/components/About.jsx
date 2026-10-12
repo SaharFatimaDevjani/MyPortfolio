@@ -6,15 +6,22 @@ export default function About() {
     <section id="about" className="mx-auto max-w-3xl px-6 py-28">
       <Reveal>
         <SectionHeading index="01" title="About" />
-        <p className="mt-8 text-lg leading-relaxed text-ink-soft sm:text-xl">
-          I'm a self-funded BSCS graduate of Muhammad Ali Jinnah University who builds full-stack
-          web applications, most recently a real-time computer vision try-on system for my
-          final-year project. I paid my own way through school with a string of internships —
-          frontend, then AI product work, then full-stack MERN — before moving into a full-time
-          Software Design Engineer role. Day to day I work on a production banking application, and
-          I'm currently focused on sharpening my backend engineering with AI-assisted workflows —
-          with an eye on going deeper into AI/ML down the line.
-        </p>
+        <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink-soft sm:text-xl">
+          <p>
+            I'm a Software Design Engineer at <span className="font-semibold text-ink">Teresol</span> in
+            Karachi, where since June 2026 I've been building a production banking application with
+            Vue.js and Camunda BPMN workflows.
+          </p>
+          <p>
+            I'm a full-stack developer at heart. Most of my work is in the MERN stack, and I've also
+            built projects with Spring Boot and Django. For my final-year project I brought real-time
+            computer vision to e-commerce: an in-browser virtual try-on for accessories.
+          </p>
+          <p>
+            I'm currently learning machine learning and plan to pursue a master's degree in Germany to
+            take that further. I care about clean, maintainable code and software that real people use.
+          </p>
+        </div>
       </Reveal>
     </section>
   )

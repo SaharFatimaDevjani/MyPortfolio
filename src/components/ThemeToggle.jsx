@@ -7,7 +7,7 @@ export default function ThemeToggle({ theme, onToggle }) {
       type="button"
       onClick={onToggle}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="group relative flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent cursor-pointer"
+      className="group relative flex h-9 w-9 items-center justify-center rounded-full border border-line-strong text-ink-soft transition-colors hover:border-accent hover:text-accent cursor-pointer"
     >
       <Sun
         size={16}

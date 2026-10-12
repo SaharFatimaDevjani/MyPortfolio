@@ -23,7 +23,7 @@ export default function Projects() {
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {rest.map((project, i) => (
-            <Reveal key={project.id} delay={0.05 * (i % 2)}>
+            <Reveal key={project.id} delay={0.05 * (i % 2)} className="h-full">
               <ProjectCard project={project} />
             </Reveal>
           ))}

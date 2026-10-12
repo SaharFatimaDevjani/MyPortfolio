@@ -22,7 +22,7 @@ export default function Skills() {
                   const Icon = TECH_ICONS[skill]
                   return (
                     <li key={skill} className="group/skill flex items-center gap-3 text-sm text-ink-soft">
-                      <span className="flex h-5 w-5 shrink-0 items-center justify-center text-ink-soft/70 transition-colors group-hover/skill:text-accent">
+                      <span aria-hidden="true" className="flex h-5 w-5 shrink-0 items-center justify-center text-ink-soft/70 transition-colors group-hover/skill:text-accent">
                         {Icon ? <Icon size={16} /> : <span className="h-1.5 w-1.5 rounded-full bg-accent" />}
                       </span>
                       <span className="transition-colors group-hover/skill:text-ink">{skill}</span>
