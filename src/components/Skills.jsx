@@ -10,7 +10,7 @@ export default function Skills() {
         <SectionHeading index="03" title="Skills" />
       </Reveal>
 
-      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((group, i) => (
           <Reveal key={group.category} delay={0.08 * i}>
             <div className="h-full rounded-2xl border border-line bg-surface p-6 transition-colors hover:border-accent/50">

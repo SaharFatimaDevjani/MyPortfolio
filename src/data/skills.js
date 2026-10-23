@@ -1,20 +1,16 @@
-// Skill cards on the Skills section. Names that match a key in
+// Skill groups mirror the CV's honest proficiency levels. Names that match a key in
 // components/icons/techIcons.js get a brand icon; anything else shows a neutral dot.
 export const skillGroups = [
   {
-    category: 'Frontend',
-    skills: ['React', 'Next.js', 'Vue.js', 'JavaScript (ES6+)', 'HTML5 / CSS3', 'Tailwind CSS', 'Bootstrap'],
+    category: 'Proficient',
+    skills: ['JavaScript', 'React', 'Next.js', 'HTML5 / CSS3', 'Tailwind CSS', 'Python', 'REST APIs', 'Git & GitHub', 'WordPress'],
   },
   {
-    category: 'Backend',
-    skills: ['Node.js', 'Express', 'Django', 'Spring Boot', 'REST APIs', 'JWT Auth'],
+    category: 'Working knowledge',
+    skills: ['Node.js', 'Express.js', 'Django', 'MongoDB', 'MySQL', 'SQLite', 'Firebase', 'JWT authentication', 'Postman', 'Vercel', 'Cloudinary', 'Figma'],
   },
   {
-    category: 'Languages & Data',
-    skills: ['Python', 'Java', 'C / C++', 'MongoDB', 'MySQL', 'PostgreSQL', 'Firebase'],
-  },
-  {
-    category: 'Tools & Platforms',
-    skills: ['Git / GitHub', 'Camunda (BPMN workflows)', 'MediaPipe', 'WordPress', 'Jest / Mocha', 'Figma', 'Postman', 'Vercel'],
+    category: 'Familiar with',
+    skills: ['Java / Spring Boot', 'Vue.js', 'Camunda (BPMN)', 'MediaPipe', 'OpenCV', 'scikit-learn', 'PostgreSQL', 'C#', 'C / C++'],
   },
 ]
