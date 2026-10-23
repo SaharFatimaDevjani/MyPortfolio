@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowUpRight } from 'lucide-react'
-import { experience } from '../data/experience'
+import { ArrowUpRight, HeartHandshake, Languages } from 'lucide-react'
+import { experience, volunteering, languages } from '../data/experience'
 import Reveal from './Reveal'
 import SectionHeading from './SectionHeading'
 import TechIcon from './icons/TechIcon'
@@ -82,6 +82,41 @@ export default function Experience() {
             <AnimatePresence mode="wait">
               <Detail item={experience[active]} />
             </AnimatePresence>
+          </div>
+        </div>
+      </Reveal>
+
+      <Reveal delay={0.1}>
+        <div className="mt-6 grid gap-4 md:grid-cols-[2fr_1fr]">
+          <div className="rounded-2xl border border-line bg-surface p-6">
+            <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-soft">
+              <HeartHandshake size={14} className="text-accent" aria-hidden="true" />
+              Volunteering
+            </h3>
+            <ul className="mt-4 space-y-4">
+              {volunteering.map((v) => (
+                <li key={v.organization}>
+                  <p className="text-sm font-semibold text-ink">
+                    {v.organization} <span className="font-normal text-ink-soft">· {v.role}</span>
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">{v.description}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-line bg-surface p-6">
+            <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-soft">
+              <Languages size={14} className="text-accent" aria-hidden="true" />
+              Languages
+            </h3>
+            <ul className="mt-4 space-y-2">
+              {languages.map((l) => (
+                <li key={l.name} className="flex items-baseline justify-between gap-3 text-sm">
+                  <span className="font-semibold text-ink">{l.name}</span>
+                  <span className="text-ink-soft">{l.level}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Reveal>

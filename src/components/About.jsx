@@ -9,17 +9,19 @@ export default function About() {
         <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink-soft sm:text-xl">
           <p>
             I'm a Software Design Engineer at <span className="font-semibold text-ink">Teresol</span> in
-            Karachi, where since June 2026 I've been building a production banking application with
-            Vue.js and Camunda BPMN workflows.
+            Karachi, contributing to a production banking application in a regulated financial
+            environment. I configure Camunda BPMN workflows and work in the Vue.js front end.
           </p>
           <p>
-            I'm a full-stack developer at heart. Most of my work is in the MERN stack, and I've also
-            built projects with Spring Boot and Django. For my final-year project I brought real-time
-            computer vision to e-commerce: an in-browser virtual try-on for accessories.
+            I hold a BS in Computer Science (CGPA 3.51/4.00) and bring front-end, back-end and
+            applied-AI experience from three internships. Most of my projects use the MERN stack, with
+            others in Spring Boot and Django. I was team lead of a Grade-A computer-vision final-year
+            project: VTry, an accessories store with real-time, in-browser virtual try-on.
           </p>
           <p>
-            I'm currently learning machine learning and looking for ways to bring it into the products I
-            build. I care about clean, maintainable code and software that real people use.
+            I'm most interested in work that combines software development, web development and AI, and
+            I'm currently learning machine learning. I care about clean, maintainable code and software
+            that real people use.
           </p>
         </div>
       </Reveal>

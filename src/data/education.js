@@ -1,9 +1,9 @@
 export const education = {
   degree: 'Bachelor of Computer Science (BSCS)',
   school: 'Muhammad Ali Jinnah University (MAJU)',
-  period: 'Feb 2021 — Dec 2025',
+  period: '2020 — 2025',
   location: 'Karachi, Pakistan',
-  grade: 'CGPA 3.5',
+  grade: 'CGPA 3.51 / 4.00',
   note: 'Funded my own studies by tutoring students and completing several software internships alongside full-time coursework.',
 }
 
@@ -21,12 +21,12 @@ export const certificationGroups = [
         courses: [
           'Introduction to Front-End Development',
           'Programming with JavaScript',
-          'Version Control',
+          'HTML and CSS in Depth',
           'React Basics',
         ],
       },
-      { name: 'Frontend Development', issuer: 'CodeGirls · ConsulNet', topics: 'HTML, CSS, JavaScript, and jQuery' },
-      { name: 'WordPress Development', issuer: 'CodeGirls · ConsulNet', topics: 'Building websites with WordPress and plugins' },
+      { name: 'Frontend Development', issuer: 'CodeGirls · ConsulNet, with Contour Software', topics: 'HTML, CSS, JavaScript, and jQuery' },
+      { name: 'WordPress Development', issuer: 'CodeGirls · ConsulNet, with Contour Software', topics: 'Building websites with WordPress and plugins' },
       { name: 'Node.js Certificate', issuer: 'MindLuster', topics: 'Node.js fundamentals, modules, and building server-side applications' },
       { name: 'Getting Started with NodeJS', issuer: 'SimpliLearn', topics: 'Node.js basics, npm, and the core runtime modules' },
     ],
@@ -40,8 +40,9 @@ export const certificationGroups = [
         status: 'In progress',
         courses: ['Crash Course on Python'],
       },
-      { name: 'Python Programming', issuer: 'CodeGirls · ConsulNet', topics: 'Python programming, Django, and MySQL' },
-      { name: 'Structured Query Language (SQL)', issuer: 'CU Boulder', topics: 'SQL fundamentals, queries, joins, and database design' },
+      { name: 'Python & Django', issuer: 'CodeGirls · ConsulNet, with Contour Software', topics: 'Python programming, Django, and MySQL' },
+      { name: 'Java', issuer: 'CodeGirls · ConsulNet, with Contour Software', topics: 'Java programming fundamentals' },
+      { name: 'Structured Query Language (SQL)', issuer: 'University of Colorado Boulder · Coursera', topics: 'SQL fundamentals, queries, joins, and database design' },
       { name: 'Introduction to Relational Database and SQL', issuer: 'Coursera', topics: 'Relational database concepts, tables and keys, and basic SQL queries' },
     ],
   },
@@ -54,12 +55,13 @@ export const certificationGroups = [
   {
     category: 'Entrepreneurship',
     items: [
-      { name: 'Certificate in Entrepreneurial Development', issuer: 'Institute of Business Administration (IBA)', topics: 'Entrepreneurship fundamentals and business planning' },
+      { name: 'Entrepreneurial Development Program', issuer: 'Institute of Business Administration (IBA), Karachi', topics: 'Entrepreneurship fundamentals and business planning' },
+      { name: 'eCompreneurship', issuer: 'Kamyab Career', topics: 'Starting and running an online business' },
     ],
   },
 ]
 
 export const currentlyLearning = {
-  name: 'Machine Learning Specialization',
-  issuer: 'Stanford · DeepLearning.AI · Coursera',
+  name: 'Machine Learning',
+  issuer: 'Coursera',
 }

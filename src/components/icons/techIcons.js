@@ -33,6 +33,8 @@ import {
   SiVercel,
   SiCplusplus,
   SiMediapipe,
+  SiOpencv,
+  SiDotnet,
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa6'
 
@@ -84,4 +86,12 @@ export const TECH_ICONS = {
   'MediaPipe': SiMediapipe,
   'Firebase': SiFirebase,
   'Jest / Mocha': SiJest,
+  'JavaScript': SiJavascript,
+  'Git & GitHub': SiGit,
+  'Express.js': SiExpress,
+  'JWT authentication': SiJsonwebtokens,
+  'Java / Spring Boot': SiSpringboot,
+  'Camunda (BPMN)': SiCamunda,
+  'OpenCV': SiOpencv,
+  'C#': SiDotnet,
 }

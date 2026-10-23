@@ -16,11 +16,11 @@ export const projects = [
   {
     id: 'vtryfyp',
     featured: true,
-    name: 'VTryFYP',
-    tagline: 'Accessories e-commerce with real-time, in-browser virtual try-on',
+    name: 'VTry — Virtual Try-On Accessories Shop',
+    tagline: 'Final Year Project, Grade A · Team lead (4 members) · real-time in-browser virtual try-on',
     description:
-      "My final-year project and flagship build: a full-stack accessories store where customers try products on through their webcam before buying — no app install, no server round-trip per frame. The try-on runs entirely client-side on Google's MediaPipe Face Landmarker, tracking facial landmarks in real time and rendering the overlay to canvas every frame, with exponential smoothing to kill jitter and admin-configurable scale/rotation/offset per product for accurate calibration. The admin side includes a live camera preview for tuning overlays, plus full product, category, and order management. The try-on engine is built for accessories in general: glasses are live to try today, and other accessories such as earrings and necklaces are planned next.",
-    tech: ['React 18', 'Vite', 'Tailwind CSS', 'Storefront UI', 'MediaPipe', 'Node.js', 'Express 5', 'MongoDB', 'Mongoose', 'JWT', 'Cloudinary'],
+      "I proposed the idea and led a team of four to build it: a full-stack accessories store where customers try products on through their webcam before buying — no app install, no server round-trip per frame. I built about 80% of the back-end REST API and the front-end integration: JWT auth with bcrypt, role-based admin routes, guest and user checkout with stock handling, Cloudinary uploads, password reset by email, and Swagger API docs. The try-on runs entirely client-side on Google's MediaPipe Face Landmarker, with facial landmarks driving the overlay's position, scale, and rotation in real time and rendering the overlay to canvas every frame, with exponential smoothing to kill jitter and admin-configurable scale/rotation/offset per product for accurate calibration. The admin side includes a live camera preview for tuning overlays, plus full product, category, and order management. The try-on engine is built for accessories in general: glasses are live to try today, and other accessories such as earrings and necklaces are planned next.",
+    tech: ['React 18', 'Vite', 'Tailwind CSS', 'Storefront UI', 'MediaPipe', 'Node.js', 'Express 5', 'MongoDB', 'Mongoose', 'JWT', 'bcrypt', 'Cloudinary', 'Swagger'],
     github: 'https://github.com/SaharFatimaDevjani/VTryFYP',
     demo: null,
     image: localImage('vtryfyp'),
@@ -39,10 +39,10 @@ export const projects = [
   },
   {
     id: 'freshbaked',
-    name: 'Fresh Baked',
-    tagline: 'Bakery storefront with Firebase-backed admin panel — deployed live',
+    name: 'Fresh Baked — Bakery Portal',
+    tagline: 'CodeGirls final project · bakery site with a Firebase admin panel — deployed live',
     description:
-      "A bakery site I built at the end of my React course as a capstone project, with an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
+      "My CodeGirls final project, built at the end of the React course: a bakery site with a category-based menu and an actual admin workflow behind it: Firebase email/password and Google sign-in gate a panel where admins add, edit, and delete products and manage customer testimonials. Customers get category-filtered browsing and a favorites slider. It's one of the few projects here I've actually deployed and kept live.",
     tech: ['React', 'Vite', 'Tailwind CSS', 'Firebase Auth', 'Firestore', 'React Router', 'Framer Motion'],
     github: 'https://github.com/SaharFatimaDevjani/freshbaked',
     demo: 'https://freshbaked.vercel.app/',
@@ -95,9 +95,9 @@ export const projects = [
   {
     id: 'hotel-management-system',
     name: 'Hotel Management System',
-    tagline: 'Spring Boot + React booking platform with role-based access',
+    tagline: 'Spring Boot + React booking app with availability checks and an admin panel',
     description:
-      'A full-stack hotel booking system split across a Spring Boot REST API and a React SPA. Customers browse and book rooms with a choice of payment method (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and a global exception handler for consistent API error responses — my first project pairing React with a Java backend instead of Node.',
+      'A full-stack hotel booking system split across a Spring Boot REST API (Spring Security, JWT, JPA) and a React front end. Bookings run through overlap and availability checks and automatic price calculation, and customers pay with a choice of simulated payment methods (cash, balance, or card); admins get a tabbed panel for managing rooms, users, and bookings, plus a walk-in booking flow through a seeded admin account. The backend leans on Spring Security with JWT, Spring Data JPA over MySQL, and global JSON error handling for consistent API responses — my first project pairing React with a Java backend instead of Node.',
     tech: ['Java 17', 'Spring Boot 3', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'React 19', 'Vite', 'Tailwind CSS'],
     github: 'https://github.com/SaharFatimaDevjani/hotelmanagementsystem',
     demo: null,
@@ -105,8 +105,8 @@ export const projects = [
   },
   {
     id: 'devjanimasala',
-    name: 'DevjaniMasala',
-    tagline: "Django coursework storefront for my family's spice business",
+    name: 'Devjani Masala — Spice Business Portfolio',
+    tagline: "Django web app for my family's spice business, with authentication and Django admin",
     description:
       "A separate, earlier Django-powered product catalog and admin panel — same family business as Devjani Naturals in concept, but a different build (this one was a course project, not the live site). Authenticated admin access for managing listings, a template-driven storefront on the customer side, and structured with future e-commerce features — cart, checkout, payments — in mind. It was my first real project outside the MERN stack, working with Django's ORM and templating instead.",
     tech: ['Python', 'Django', 'SQLite', 'Django Templates'],
@@ -185,8 +185,8 @@ export const otherProjects = [
   },
   {
     id: 'tasty-treats',
-    name: 'Tasty Treats',
-    tagline: 'ASP.NET Core MVC + Entity Framework CRUD app (MVCDemo repo)',
+    name: 'TastyTreats — Inventory App',
+    tagline: 'Snack inventory app in C# / ASP.NET MVC with full CRUD (MVCDemo repo)',
     github: 'https://github.com/SaharFatimaDevjani/MVCDemo',
     demo: null,
     image: localImage('tasty-treats'),
