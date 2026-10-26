@@ -5,7 +5,15 @@ export default function About() {
   return (
     <section id="about" className="mx-auto max-w-3xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="01" title="About" />
+        <SectionHeading
+          index="01"
+          label="About"
+          title={
+            <>
+              Turning ideas into <span className="text-gradient">software people use.</span>
+            </>
+          }
+        />
         <div className="mt-8 space-y-5 text-lg leading-relaxed text-ink-soft sm:text-xl">
           <p>
             I'm a Software Design Engineer at <span className="font-semibold text-ink">Teresol</span> in

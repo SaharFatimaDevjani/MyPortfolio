@@ -1,13 +1,17 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, FileText } from 'lucide-react'
-import { useTypewriter } from '../hooks/useTypewriter'
+import { ArrowDown, ArrowUpRight, FileText } from 'lucide-react'
+import { useRotatingTypewriter } from '../hooks/useRotatingTypewriter'
 import { useHeroScrollCommit } from '../hooks/useHeroScrollCommit'
 import PersonPhoto from './visuals/PersonPhoto'
 import { GithubIcon, LinkedinIcon } from './icons/BrandIcons'
 import { profile } from '../data/profile'
 
-const TAGLINE = 'Full-stack developer building for the web & real-time vision.'
-const TICKER = ['React', 'Vue.js', 'Node.js', 'MongoDB', 'MediaPipe', 'Tailwind CSS', 'Express', 'Camunda']
+const ROLES = [
+  'Full-Stack Web Developer',
+  'Software Design Engineer',
+  'React & Node.js Developer',
+  'Computer Vision Enthusiast',
+]
 
 const SOCIALS = [
   { label: 'GitHub', href: profile.github, icon: GithubIcon },
@@ -15,8 +19,8 @@ const SOCIALS = [
 ]
 
 export default function Hero() {
-  const { output, done } = useTypewriter(TAGLINE, { speed: 28, startDelay: 500 })
-  useHeroScrollCommit('about')
+  const role = useRotatingTypewriter(ROLES)
+  useHeroScrollCommit('highlights')
 
   return (
     <section
@@ -57,10 +61,21 @@ export default function Hero() {
         </motion.div>
 
         <div className="flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left">
-          <motion.p
+          <motion.a
+            href="#contact"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            className="group mb-5 inline-flex items-center gap-2 rounded-full border border-line bg-surface/70 px-3.5 py-1.5 text-xs font-medium text-ink transition-colors hover:border-accent"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+            Open to opportunities
+            <ArrowUpRight size={13} className="text-accent transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+          </motion.a>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
             className="font-mono text-xs uppercase tracking-[0.3em] text-accent"
           >
             Hi, I&apos;m
@@ -70,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mt-4 text-[2.5rem] leading-[1.1] font-extrabold tracking-tight text-balance text-ink sm:text-5xl lg:text-6xl"
+            className="text-gradient mt-4 pb-1 text-[2.5rem] leading-[1.1] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl"
           >
             {profile.name}
           </motion.h1>
@@ -86,12 +101,16 @@ export default function Hero() {
             <span className="font-semibold text-ink">{profile.currentRole.company}</span>
           </motion.p>
 
-          <div className="mt-5 h-14 max-w-xl">
-            <p className="font-mono text-base text-ink-soft sm:text-lg">
-              {output}
-              <span className={`ml-0.5 inline-block w-[2px] translate-y-0.5 bg-accent align-middle ${done ? 'animate-blink' : ''}`}>
-                &nbsp;
-              </span>
+          <div className="mt-5 max-w-xl">
+            {/* Visual typing line; screen readers get the full list once via the sr-only text. */}
+            <p aria-hidden="true" className="h-8 font-mono text-lg font-medium text-ink sm:text-xl">
+              {role}
+              <span className="ml-1 inline-block h-[1.1em] w-[2px] translate-y-[3px] animate-blink bg-accent" />
+            </p>
+            <p className="sr-only">{ROLES.join(', ')}</p>
+            <p className="mt-3 text-base leading-relaxed text-ink-soft">
+              I build reliable full-stack web applications, from banking workflows to real-time virtual
+              try-on.
             </p>
           </div>
 
@@ -139,28 +158,13 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 2 }}
-            className="mt-10 w-full max-w-md overflow-hidden lg:max-w-full"
-            style={{ maskImage: 'linear-gradient(90deg, transparent, black 15%, black 85%, transparent)' }}
-          >
-            <div className="flex w-max animate-marquee gap-8">
-              {[...TICKER, ...TICKER].map((item, i) => (
-                <span key={i} className="font-mono text-xs uppercase tracking-wider text-ink-soft/90">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
 
       <motion.a
-        href="#about"
-        aria-label="Scroll to About section"
-        className="absolute bottom-8 text-ink-soft"
+        href="#highlights"
+        aria-label="Scroll down"
+        className="absolute bottom-8 hidden text-ink-soft sm:block"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
       >

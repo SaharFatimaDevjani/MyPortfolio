@@ -13,7 +13,12 @@ export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="02" title="Projects" />
+        <SectionHeading
+          index="02"
+          label="Projects"
+          title="Things I've built"
+          intro="From a computer-vision try-on store to a live business website: a selection of full-stack, frontend and coursework projects."
+        />
       </Reveal>
 
       <div className="mt-10 grid gap-6">

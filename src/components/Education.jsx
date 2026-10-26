@@ -10,7 +10,7 @@ const totalCount = certificationGroups.reduce((n, g) => n + g.items.length, 0)
 
 function CertCard({ cert }) {
   return (
-    <div className="h-full rounded-xl border border-line bg-surface px-4 py-3.5 transition-colors hover:border-accent/60">
+    <div className="spotlight h-full rounded-xl border border-line bg-surface px-4 py-3.5 transition-colors hover:border-accent/60">
       <div className="flex flex-wrap items-start justify-between gap-x-3 gap-y-1.5">
         <p className="text-sm font-semibold text-ink">{cert.name}</p>
         {cert.status && (
@@ -49,11 +49,11 @@ export default function Education() {
   return (
     <section id="education" className="mx-auto max-w-5xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="05" title="Education & Certifications" />
+        <SectionHeading index="05" label="Education" title="Education & certifications" />
       </Reveal>
 
       <Reveal delay={0.05}>
-        <div className="mt-10 flex items-start gap-4 rounded-2xl border border-line bg-surface p-6">
+        <div className="spotlight mt-10 flex items-start gap-4 rounded-2xl border border-line bg-surface p-6">
           <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
             <GraduationCap size={18} aria-hidden="true" />
           </span>

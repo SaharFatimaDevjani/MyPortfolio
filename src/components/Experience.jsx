@@ -56,11 +56,11 @@ export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-5xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="04" title="Experience" />
+        <SectionHeading index="04" label="Experience" title="Where I've worked" />
       </Reveal>
 
       <Reveal delay={0.05}>
-        <div className="mt-10 overflow-hidden rounded-2xl border border-line bg-surface md:flex">
+        <div className="spotlight mt-10 overflow-hidden rounded-2xl border border-line bg-surface md:flex">
           <div className="flex gap-1 overflow-x-auto border-b border-line p-2 md:w-56 md:shrink-0 md:flex-col md:border-b-0 md:border-r md:p-3">
             {experience.map((item, i) => (
               <button
@@ -88,7 +88,7 @@ export default function Experience() {
 
       <Reveal delay={0.1}>
         <div className="mt-6 grid gap-4 md:grid-cols-[2fr_1fr]">
-          <div className="rounded-2xl border border-line bg-surface p-6">
+          <div className="spotlight rounded-2xl border border-line bg-surface p-6">
             <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-soft">
               <HeartHandshake size={14} className="text-accent" aria-hidden="true" />
               Volunteering
@@ -104,7 +104,7 @@ export default function Experience() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-line bg-surface p-6">
+          <div className="spotlight rounded-2xl border border-line bg-surface p-6">
             <h3 className="flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-ink-soft">
               <Languages size={14} className="text-accent" aria-hidden="true" />
               Languages

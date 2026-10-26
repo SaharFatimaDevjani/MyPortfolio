@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-3xl px-6 py-28">
       <Reveal>
-        <SectionHeading index="06" title="Contact" />
+        <SectionHeading index="06" label="Contact" title="Let's connect" />
         <p className="mt-6 text-lg text-ink-soft">
           Open to new roles and collaborations — feel free to reach out.
         </p>
@@ -28,7 +28,7 @@ export default function Contact() {
               download={download}
               target={href.startsWith('mailto:') || download ? undefined : '_blank'}
               rel={href.startsWith('mailto:') || download ? undefined : 'noreferrer'}
-              className="group flex items-center gap-4 rounded-xl border border-line bg-surface px-5 py-4 transition-all hover:border-accent hover:-translate-y-0.5"
+              className="spotlight group flex items-center gap-4 rounded-xl border border-line bg-surface px-5 py-4 transition-all hover:border-accent hover:-translate-y-0.5"
             >
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
                 <Icon size={16} />

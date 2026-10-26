@@ -56,7 +56,7 @@ function FeaturedCard({ project }) {
       id={id}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="group scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-surface ring-1 ring-accent/30 transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10"
+      className="spotlight group scroll-mt-24 overflow-hidden rounded-2xl border border-line bg-surface ring-1 ring-accent/30 transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10"
     >
       <div className="relative overflow-hidden border-b border-line bg-gradient-to-br from-accent/20 via-accent/5 to-transparent px-5 pt-6 sm:px-12 sm:pt-8">
         {/* faint grid, echoing the hero background */}
@@ -146,7 +146,7 @@ export default function ProjectCard({ project }) {
       id={id}
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="group scroll-mt-24 flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10"
+      className="spotlight group scroll-mt-24 flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-shadow duration-300 hover:shadow-2xl hover:shadow-accent/10"
     >
       <div className="relative aspect-video overflow-hidden">
         <div className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-[1.06]">
