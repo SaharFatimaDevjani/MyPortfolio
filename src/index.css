@@ -12,8 +12,6 @@
   --color-accent: #0b5f9e;
   --color-accent-dim: #0284c7;
   --color-accent-ink: #ffffff;
-  /* Second gradient stop (violet) for headline gradients — 6.2:1 on the light bg. */
-  --color-accent-2: #6d28d9;
 
   --color-bg: #eef0f4;
   --color-surface: #ffffff;
@@ -51,7 +49,6 @@
   --color-accent: #38bdf8;
   --color-accent-dim: #0ea5e9;
   --color-accent-ink: #041521;
-  --color-accent-2: #a78bfa;
   --color-line-strong: #636a87;
   --color-bg: #090a14;
   --color-surface: #10121e;
@@ -85,15 +82,6 @@ body {
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 1.5px var(--color-ink-soft);
-}
-
-/* Blue → violet gradient text; falls back to plain accent if background-clip isn't supported. */
-.text-gradient {
-  color: var(--color-accent);
-  background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Cursor spotlight: a soft glow that follows the pointer inside cards. App.jsx sets

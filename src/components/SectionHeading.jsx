@@ -21,7 +21,7 @@ export default function SectionHeading({ index, label, title, intro }) {
       </motion.h2>
       <motion.span
         aria-hidden="true"
-        className="mt-4 block h-1 w-16 origin-left rounded-full bg-gradient-to-r from-accent to-accent-2"
+        className="mt-4 block h-1 w-16 origin-left rounded-full bg-accent"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true, amount: 0.8 }}

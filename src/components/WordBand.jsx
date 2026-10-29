@@ -9,7 +9,7 @@ export default function WordBand() {
       <div className="flex w-max animate-marquee-slow items-center gap-8 whitespace-nowrap group-hover:[animation-play-state:paused] sm:gap-12">
         {[...row, ...row].map((item, i) =>
           item === '✦' ? (
-            <span key={i} className="text-lg text-accent-2 sm:text-2xl">
+            <span key={i} className="text-lg text-accent sm:text-2xl">
               ✦
             </span>
           ) : (

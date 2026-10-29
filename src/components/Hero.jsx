@@ -39,14 +39,9 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-accent/25 blur-3xl"
+          className="absolute -left-40 top-10 hidden h-96 w-96 rounded-full bg-accent/10 blur-3xl sm:block"
           animate={{ x: [0, 50, 0], y: [0, 35, 0] }}
           transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute -right-32 bottom-0 h-[28rem] w-[28rem] rounded-full bg-accent-dim/20 blur-3xl"
-          animate={{ x: [0, -40, 0], y: [0, -30, 0] }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         />
       </div>
 
@@ -85,7 +80,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-gradient mt-4 pb-1 text-[2.5rem] leading-[1.1] font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl"
+            className="mt-4 pb-1 text-[2.5rem] leading-[1.1] font-extrabold tracking-tight text-balance text-ink sm:text-5xl lg:text-6xl"
           >
             {profile.name}
           </motion.h1>
@@ -96,7 +91,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-4 inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-3 py-1 text-xs text-ink-soft"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
             Currently {profile.currentRole.title} at{' '}
             <span className="font-semibold text-ink">{profile.currentRole.company}</span>
           </motion.p>
