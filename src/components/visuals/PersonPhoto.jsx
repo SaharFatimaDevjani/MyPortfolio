@@ -16,7 +16,7 @@ export default function PersonPhoto({ name, className = '' }) {
   if (failed) {
     return (
       <div
-        className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/25 via-accent-dim/15 to-transparent font-mono text-5xl font-bold text-accent ${className}`}
+        className={`flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/25 via-accent/5 to-transparent font-mono text-5xl font-bold text-accent ${className}`}
       >
         {initials}
       </div>

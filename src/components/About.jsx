@@ -10,7 +10,7 @@ export default function About() {
           label="About"
           title={
             <>
-              Turning ideas into <span className="text-gradient">software people use.</span>
+              Turning ideas into <span className="text-accent">software people use.</span>
             </>
           }
         />

@@ -25,8 +25,8 @@ export default function AvailabilityBadge() {
       className="fixed bottom-6 left-6 z-40 hidden items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-2 text-xs font-medium text-ink shadow-lg shadow-black/5 backdrop-blur-md transition-colors hover:border-accent md:inline-flex"
     >
       <span className="relative flex h-2 w-2">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-50" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
       </span>
       Available for work
     </motion.a>

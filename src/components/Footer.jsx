@@ -41,11 +41,11 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-gradient my-10 text-5xl font-extrabold leading-[1.05] tracking-tight sm:my-14 sm:text-7xl lg:text-8xl"
+          className="my-10 text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:my-14 sm:text-7xl lg:text-8xl"
         >
           Sahar Fatima
           <br />
-          Devjani.
+          Devjani<span className="text-accent">.</span>
         </motion.p>
 
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
